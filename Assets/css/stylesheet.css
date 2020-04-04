@@ -17,7 +17,7 @@
     width: 600px;
     height: 400px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0% auto;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   }
   .carousel:hover .slide:after,
@@ -127,7 +127,7 @@
     padding: 80px 0 60px 0;
     text-align: center;
     color: #fff;
-    margin: auto;
+    margin: 10% auto;
     width: 800px;
   }
   .intro .intro__title {
@@ -176,7 +176,7 @@
     display: block;
   }
   #nav li a:active {
-    background-color: #c00 !important;
+    background-color: blue !important;
   }
   #nav span:after {
     width: 0;
@@ -193,7 +193,7 @@
   /* first level */
   #nav > ul {
       height: 3.75em; /* 60 */
-      background-color: #e15a1f;
+      background-color: rgb(101, 101, 121);
   }
   #nav > ul > li {
       width: 25%;
@@ -207,15 +207,15 @@
       text-align: center;
   }
   #nav > ul > li:not( :last-child ) > a {
-      border-right: 1px solid #cc470d;
+      border-right: 1px solid blue;
   }
   #nav > ul > li:hover > a,
   #nav > ul:not( :hover ) > li.active > a {
-      background-color: #cc470d;
+      background-color: burlywood;
   }
   /* second level */
   #nav li ul {
-      background-color: #cc470d;
+      background-color: burlywood;
       display: none;
       position: absolute;
       top: 100%;
@@ -230,12 +230,12 @@
   }
   #nav li ul a {
       font-size: 1.25em; /* 20 */
-      border-top: 1px solid #e15a1f;
+      border-top: 1px solid  burlywood;
       padding: 0.75em; /* 15 (20) */
   }
   #nav li ul li a:hover,
   #nav li ul:not( :hover ) li.active a {
-      background-color: #e15a1f;
+      background-color: grey;
   }
   @media only screen and ( max-width: 62.5em ) { /* 1000 */
       #nav {
@@ -309,6 +309,26 @@
         padding-top: 0;
     }
 }
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
   
   

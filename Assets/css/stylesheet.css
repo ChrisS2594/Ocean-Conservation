@@ -122,7 +122,7 @@
   .faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia:checked + .slide {
     opacity: 1;
   }
-  /* --- Intro text --- */
+  /* --- Intro text to the page --- */
   .intro {
     padding: 80px 0 60px 0;
     text-align: center;

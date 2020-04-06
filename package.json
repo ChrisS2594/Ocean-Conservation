@@ -1,0 +1,20 @@
+{
+  "name": "ocean-conservation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisS2594/Ocean-Conservation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisS2594/Ocean-Conservation/issues"
+  },
+  "homepage": "https://github.com/ChrisS2594/Ocean-Conservation#readme"
+},
+

@@ -33,7 +33,7 @@
   }
   body {
     
-    background: url() ;
+    background: url(ocean.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -372,7 +372,7 @@ img.bg {
     background: #ffffff;
     border-bottom:  2px Solid black;
     border-top: 2px solid black;
-    margin: 10% auto;
+    margin: 0 auto;
     width: 100%;
     opacity: 0.6;
   }

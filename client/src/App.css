@@ -192,12 +192,16 @@
     font-family: sans-serif;
     text-decoration: none;
   }
+
+
+
   #nav {
     width: 60em; /* 1000 */
     position: absolute;
-    top: 0%;
+    top: 25%;
     left: 50%;
     margin-left: -30em; /* 30 480 */
+   
   }
   #nav > a {
     display: none;
@@ -366,16 +370,8 @@ img.bg {
   }
 }
   
-  .header {
-    
-    text-align: center;
-    background: #ffffff;
-    border-bottom:  2px Solid black;
-    border-top: 2px solid black;
-    margin: 0 auto;
-    width: 100%;
-    opacity: 0.6;
-  }
+ 
+  
   .splash {
     text-align: center;
     background: #ffffff;

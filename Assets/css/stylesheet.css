@@ -17,12 +17,13 @@
   }
   
   .carousel {
-    position: relative;
+    position: relative ;
     width: 600px;
     height: 400px;
     overflow: hidden;
     margin: 0% auto;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border: 2px solid black;
   }
   .carousel:hover .slide:after,
   .carousel:hover .counter,
@@ -135,6 +136,7 @@
     margin: 10% auto;
     width: 800px;
     opacity: 0.6;
+    border-radius: 25px;
     
   }
   .intro .intro__title {
@@ -196,6 +198,7 @@
       display: inline-block;
       position: relative;
       right: -0.313em; /* 5 */
+      
   }
   /* first level */
   #nav > ul {
@@ -338,4 +341,25 @@ img.bg {
   }
 }
   
-  
+  .splash {
+    padding: 15px 15px 25px 15px;
+    background-color: #ffffff;
+    text-align: center;
+    border: 2px solid black;
+    margin: 10% auto;
+    width: 800px;
+    opacity: 0.6;
+    border-radius: 25px;
+
+    
+  }
+  .header {
+    
+    text-align: center;
+    background: #ffffff;
+    border-bottom:  2px Solid black;
+    border-top: 2px solid black;
+    margin: 10% auto;
+    width: 100%;
+    opacity: 0.6;
+  }

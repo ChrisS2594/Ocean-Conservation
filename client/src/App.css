@@ -8,14 +8,14 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #222  ;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: large; 
 }
 
 @keyframes App-logo-spin {
@@ -159,7 +159,7 @@
     text-align: center;
     border: 2px solid black;
     margin: 10% auto;
-    width: 800px;
+    width: 700px;
     opacity: 0.6;
     border-radius: 25px;
     
@@ -201,6 +201,7 @@
     top: 25%;
     left: 50%;
     margin-left: -30em; /* 30 480 */
+    margin-top:-5em;
    
   }
   #nav > a {
@@ -376,7 +377,7 @@ img.bg {
     text-align: center;
     background: #ffffff;
     border: 2px solid black;
-    margin: 5% auto;
+    margin: 3% auto;
     width: 100%;
     opacity:0.6;
     border-radius: 25px;

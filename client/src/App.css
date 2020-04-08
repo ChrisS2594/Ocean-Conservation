@@ -374,6 +374,7 @@ img.bg {
  
   
   .splash {
+    --max-lines:3;
     text-align: center;
     background: #ffffff;
     border: 2px solid black;

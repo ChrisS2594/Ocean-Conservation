@@ -8,14 +8,14 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #222  ;
+  height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: large; 
 }
 
 @keyframes App-logo-spin {
@@ -33,7 +33,7 @@
   }
   body {
     
-    background: url(../../Assets/images/ocean.jpg) ;
+    background: url(ocean.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -46,7 +46,7 @@
     width: 600px;
     height: 400px;
     overflow: hidden;
-    margin: 0% auto;
+    margin: 10% auto;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     border: 2px solid black;
   }
@@ -159,7 +159,7 @@
     text-align: center;
     border: 2px solid black;
     margin: 10% auto;
-    width: 800px;
+    width: 900px;
     opacity: 0.6;
     border-radius: 25px;
     
@@ -192,12 +192,17 @@
     font-family: sans-serif;
     text-decoration: none;
   }
+
+
+
   #nav {
     width: 60em; /* 1000 */
     position: absolute;
-    top: 0%;
+    top: 25%;
     left: 50%;
     margin-left: -30em; /* 30 480 */
+    margin-top:-5em;
+   
   }
   #nav > a {
     display: none;
@@ -366,22 +371,20 @@ img.bg {
   }
 }
   
-  .header {
-    
-    text-align: center;
-    background: #ffffff;
-    border-bottom:  2px Solid black;
-    border-top: 2px solid black;
-    margin: 10% auto;
-    width: 100%;
-    opacity: 0.6;
-  }
+ 
+  
   .splash {
     text-align: center;
     background: #ffffff;
     border: 2px solid black;
-    margin: 5% auto;
+    margin: -8% auto;
     width: 100%;
     opacity:0.6;
     border-radius: 25px;
+  }
+
+  .footer {
+    text-align:center;
+    font:serif;
+  
   }

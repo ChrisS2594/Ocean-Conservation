@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-
+import "../../pages/login"
 
 // this index.js runs the Nav bar on the app
 function Nav() {
@@ -17,7 +17,7 @@ function Nav() {
       <li>
         <a href="#"><span>Quizes</span></a>
       </li>
-      <li><a href="#">Log In</a></li>
+      <li><a href="">Log In</a></li>
     </ul>
   </nav>
     );

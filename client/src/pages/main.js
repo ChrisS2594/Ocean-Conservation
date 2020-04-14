@@ -2,12 +2,10 @@ import React from "react";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import "./../index.css";
-
+import "./login"
 
 
 function Main(){
-    
-    
       return (
         <div>
           <br />
@@ -22,6 +20,8 @@ function Main(){
               Through sharing of information and discussion we hope to bring more awareness to these issues and help find
               common sense resolutions to these issues.
               Join us on this journey of conservation and awareness</p>
+
+              
           </div>
           <div className="splash">
             <h3 className="splash__title">Overfishing:</h3>

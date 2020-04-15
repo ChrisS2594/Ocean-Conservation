@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import "../../pages/login"
+
 
 // this index.js runs the Nav bar on the app
 function Nav() {

@@ -4,6 +4,9 @@ import "./App.scss";
 import Main from "./../src/pages/main"
 import Foot from ".//Components/Footer/Foot"
 
+
+
+
 class App extends Component {
   render() {
     return (
@@ -32,8 +35,6 @@ class App extends Component {
 
 
 }
-
-
 
 
 export default App;

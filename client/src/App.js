@@ -3,6 +3,7 @@ import Nav from "./Components/Nav/index"
 import "./App.scss";
 import Main from "./../src/pages/main"
 import Foot from ".//Components/Footer/Foot"
+import Container from "./pages/container";
 
 
 
@@ -14,7 +15,7 @@ class App extends Component {
         <div className="App-header">
           <h1> C.C.M.R.J Oceanic Conservation</h1>
           <Nav />
-          < Main />
+          <Container />
 
           
 

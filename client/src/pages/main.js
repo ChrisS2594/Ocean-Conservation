@@ -38,7 +38,7 @@ function Main(){
               biodiversity.
               Without Proper fish management we can only make the problem worse.
               <Router>
-              <Link to ={"./overfishing"}> Would you like to know more?</Link>
+              <Link to={"./overfishing"}> Would you like to know more?</Link>
               </Router>
               </p>
               
@@ -48,7 +48,7 @@ function Main(){
               non-biodegradable items. This has caused severe damage and harm to our largest ecosystem on the planet including
               destroying habitats,
               ocean wildlife migration patterns. As well as the death vital ecosystems.<Router>
-              <Link to ={"./pollution"}> Would you like to know more?</Link>
+              <Link to={"/pollution"}> Would you like to know more?</Link>
               </Router></p>
             <br />
             <h3 className="splash__title">Red Algae/Red Tide:</h3>
@@ -56,7 +56,7 @@ function Main(){
               they provide food for ocean wildlife. There is a Small Portion of these algae blooms (also known as the red tide)
               that can produce toxins that can kill all plant and fish life within its vicinity.
               <Router>
-              <Link to ={"./redtide"}> Would you like to know more?</Link>
+              <Link to={"./redtide"}> Would you like to know more?</Link>
               </Router></p>
           </div>
         </div>

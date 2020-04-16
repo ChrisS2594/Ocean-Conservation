@@ -31,7 +31,9 @@ export default function Login() {
   }
 
   return (
+    
     <div className="Login">
+      <h3 className="login__title">Please Sign In</h3>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
           
@@ -42,6 +44,7 @@ export default function Login() {
             onChange={e => setEmail(e.target.value)}
           />
         </FormGroup>
+        <br/>
         <FormGroup controlId="password" bsSize="large">
           
           <FormControl

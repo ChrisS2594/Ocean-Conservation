@@ -53,7 +53,8 @@ export default function Login() {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        <br/>
+        <Button className="btnsbmt" block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>

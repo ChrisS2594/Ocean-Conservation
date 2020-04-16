@@ -1,8 +1,8 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import Redtide from "./redtide";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import "./../index.css";
+import "./../App.scss";
 import {
    BrowserRouter as Router,
   Switch,
@@ -10,9 +10,10 @@ import {
   Link,
   useRouteMatch,
   useParams,
+  
   //BrowserHistory
 } from "react-router-dom";
-//import OvrFsh from "./overfishing"
+const [data, setData ] = 
 
 
 function Main() {
@@ -42,7 +43,7 @@ function Main() {
               biodiversity.
               Without Proper fish management we can only make the problem worse.
               <Router>
-              <Link to={"./overfishing"}> Would you like to know more?</Link>
+              <Link to="./overfishing"> Would you like to know more?</Link>
               </Router>
               </p>
               
@@ -52,7 +53,7 @@ function Main() {
               non-biodegradable items. This has caused severe damage and harm to our largest ecosystem on the planet including
               destroying habitats,
               ocean wildlife migration patterns. As well as the death vital ecosystems.<Router>
-              <Link to={"/pollution"}> Would you like to know more?</Link>
+              <Link exact path={"/pollution"}> Would you like to know more?</Link>
               </Router></p>
             <br />
             <h3 className="splash__title">Red Algae/Red Tide:</h3>

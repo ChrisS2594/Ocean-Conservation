@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import Nav from "./Components/Nav/index"
 import "./App.scss";
 import Main from "./pages/main"
-import Foot from ".//Components/Footer/Foot"
-import Container from "./pages/container";
+import Foot from "./Components/Footer/Foot"
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
+//import Quiz from "./pages/quiz";
+import Polution from "./pages/pollution";
+
 
 
 class App extends Component {
@@ -19,12 +21,12 @@ class App extends Component {
           <h1> C.C.M.R.J Oceanic Conservation</h1>
            <Nav />
 
-          
-         
           <Route exact path="/" component={Main} />
           <Route exact path="/overfishing" component={Overfsh} />
           <Route exact path="/login" component={Login} />
-
+          {/* <Route exact path="/" component={Polution} />
+          <Route exact path="/" component={Redtide} /> */}
+          
 
       <Foot />
         </div>

@@ -7,6 +7,7 @@ import Container from "./pages/container";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
+import Login from "./pages/login";
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
          
           <Route exact path="/" component={Main} />
           <Route exact path="/overfishing" component={Overfsh} />
+          <Route exact path="/login" component={Login} />
 
 
       <Foot />

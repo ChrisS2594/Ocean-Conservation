@@ -1,7 +1,8 @@
-import {React, useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import Redtide from "./redtide";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+//import '@brainhubeu/react-carousel/lib/style.css';
+//import Axios from "axios";
 import "./../App.scss";
 import {
    BrowserRouter as Router,
@@ -10,10 +11,19 @@ import {
   Link,
   useRouteMatch,
   useParams,
-  
   //BrowserHistory
 } from "react-router-dom";
-const [data, setData ] = 
+
+// const [data, setData ] = useState({})
+// function getData() {
+//this represents the route that cesar is making
+//   Axios.get("/main").then(obj => {
+//     setData(obj)
+//   })
+// };
+// useEffect(() => {
+//   getData()
+// } )
 
 
 function Main() {
@@ -21,7 +31,7 @@ function Main() {
         <div>
           <br />
           <div className="intro">
-            <h1 className="intro__title">About Us:</h1>
+      <h1 className="intro__title">About Us:</h1>
             <p className="intro__body">It is our vision to bring Awareness to the ongoing problems that are affecting our oceans.
               From The
               overfishing of our ocean’s lake and rivers. To the excessive amounts of trash that is being dumped into our

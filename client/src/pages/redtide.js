@@ -1,6 +1,6 @@
 import React from "react";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+//import '@brainhubeu/react-carousel/lib/style.css';
 import "./../App.scss";
 
 

@@ -34,20 +34,23 @@ export default function Register() {
     return (
 
         <div className="Register">
-            <h3 className="login__title">Register below</h3>
+            <p className="register__title">Register below</p>
             <form onSubmit={handleSubmit}>
-                <FormGroup controlId="email" bsSize="large">
-
+                <lable className="frmlbl">
+                    <FormGroup controlId="email" bsSize="large">
+                        Name:
                     <FormControl
-                        autoFocus
-                        type="Name"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                    />
-                </FormGroup>
-                <br />
+                            autoFocus
+                            type="Name"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                        />
+                    </FormGroup>
+                </lable>
+              
+                <lable className="frmlbl">
                 <FormGroup controlId="email" bsSize="large">
-
+                    Email:
                     <FormControl
                         autoFocus
                         type="email"
@@ -55,23 +58,28 @@ export default function Register() {
                         onChange={e => setEmail(e.target.value)}
                     />
                 </FormGroup>
-                <br />
+                </lable>
+               
+                <lable className="frmlbl">
                 <FormGroup controlId="password" bsSize="large">
-
+                    Password:
                     <FormControl
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         type="password"
                     />
                 </FormGroup>
+                </lable>
+                <lable className="frmlbl">
                 <FormGroup controlId="passwordconfirm" bsSize="large">
-
+                    Confirm Password:
                     <FormControl
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         type="password"
                     />
                 </FormGroup>
+                </lable>
                 <br />
                 <Button className="btnsbmt" block bsSize="large" disabled={!validateForm()} type="submit">
                     Submit

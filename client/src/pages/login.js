@@ -34,8 +34,12 @@ export default function Login() {
     
     <div className="Login">
       <h3 className="login__title">Please Sign In</h3>
-      <form onSubmit={handleSubmit}>
+      
+      
+      <form className="login__body" onSubmit={handleSubmit}>
+        <label>
         <FormGroup controlId="email" bsSize="large">
+          Email:
           
           <FormControl
             autoFocus
@@ -44,19 +48,25 @@ export default function Login() {
             onChange={e => setEmail(e.target.value)}
           />
         </FormGroup>
+        </label>
         <br/>
+        <label>
         <FormGroup controlId="password" bsSize="large">
-          
+          Password:
           <FormControl
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>
+        </label>
         <br/>
         <Button className="btnsbmt" block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>
+        <p>
+        <Link to="/register">Register here</Link>
+        </p>
       </form>
     </div>
   );

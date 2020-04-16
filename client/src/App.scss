@@ -74,31 +74,7 @@ body {
     padding: 0 160px;
     margin: 0;
   }
-  .splash {
-    padding: 15px 15px 25px 15px;
-    background-color: #ffffff;
-    text-align: center;
-    border: 2px solid black;
-    margin: 10% auto;
-    width:500 px;
-    opacity: 0.6;
-    border-radius: 25px
-  }
-  .splash .splash__title {
-    font-weight: 200;
-    font-size: 32px;
-    color: black;
-    font-style: serif;
-  }
-  .splash .splash__body {
-    color: black;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-    opacity: 10;
-    padding: 0 160px;
-    margin: 0;
-  }
+  
 
  
   ul {
@@ -204,7 +180,7 @@ img.bg {
     border: 2px solid black;
     margin: 10% auto;
     width:25% ;
-    height:225px;
+    height:275px;
     opacity: 0.6;
     border-radius: 25px
     
@@ -217,6 +193,47 @@ img.bg {
       font-style: serif;
     }
 
+    .Login .login__body {
+      color: black;
+    }
+    .splash {
+      padding: 15px 15px 25px 15px;
+      background-color: #ffffff;
+      text-align: center;
+      border: 2px solid black;
+      margin: 10% auto;
+      width:500 px;
+      opacity: 0.6;
+      border-radius: 25px
+    }
+    .splash .splash__title {
+      font-weight: 200;
+      font-size: 32px;
+      color: black;
+      font-style: serif;
+    }
+    .splash .splash__body {
+      color: black;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      opacity: 10;
+      padding: 0 160px;
+      margin: 0;
+    }
     .btnsbmt {
       border-radius: 25px;
+    }
+
+    
+
+    .Register {
+      padding: 15px 15px 25px 15px;
+      background-color: #ffffff;
+      text-align: center;
+      border: 2px solid black;
+      margin: 10% auto;
+      width: 50%;
+      opacity: 0.6;
+      border-radius: 25px
     }

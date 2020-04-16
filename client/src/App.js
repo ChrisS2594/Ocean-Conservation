@@ -9,6 +9,7 @@ import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
 //import Quiz from "./pages/quiz";
 import Polution from "./pages/pollution";
+import Register from "./pages/register";
 
 
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           {/* <Route exact path="/" component={Polution} />
           <Route exact path="/" component={Redtide} /> */}
+          <Route exact path="/register" component={Register} />
           
 
       <Foot />

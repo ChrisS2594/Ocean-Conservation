@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let events = require("../models/events.model.js");
+let Event = require("../models/events.model.js");
 
 router.route("/").get((req, res)=>{
     events.find()
@@ -8,14 +8,16 @@ router.route("/").get((req, res)=>{
 });
 
 router.route("/add").post((req, res)=>{
-    const username = req.body.name;
+    console.log(req.body);
+    const title = req.body.title;
     const description = req.body.description;
-    const date = Date.parse(req.body.date);
-
+    const date = req.body.date;
+    console.log(date)
     const newEvent = new Event({
-        username,
+        title,
         description,
-        date,
+        date
+       
     });
 newEvent.save()
 .then(()=> res.json("event added!"))

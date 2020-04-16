@@ -7,6 +7,7 @@ router.route("/").get((req, res)=> {
     .catch(err=> res.status(400).json("Error:" + err));
 });
 router.route("/add").post((req, res)=> {
+    console.log(req.body);
     const email = req.body.email;
     const password = req.body.password;
     const name = req.body.name;

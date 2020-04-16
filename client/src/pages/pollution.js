@@ -1,6 +1,4 @@
 import React from "react";
-//import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 import "./../index.css";
 
 
@@ -8,7 +6,7 @@ import "./../index.css";
 function Polution(){
       return (
 
-// fill your content into the div below
+// fill our content into the div below
 <div>
 <p>
       Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis molestie urna.

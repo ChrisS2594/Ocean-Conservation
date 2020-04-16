@@ -9,27 +9,31 @@ import {
   useParams
 } from "react-router-dom";
 
+
 // this index.js runs the Nav bar on the app
 function Nav() {
   return (
+    <Router>
+      <nav id="nav" role="navigation">
+        <a href="#nav" title="Show navigation">Show navigation</a>
+        <a href="#" title="Hide navigation">Hide navigation</a>
 
-    <nav id="nav" role="navigation">
-      <a href="#nav" title="Show navigation">Show navigation</a>
-      <a href="#" title="Hide navigation">Hide navigation</a>
-      <Router>
         <ul>
-          <li><Link to={"#"}>Home</Link></li>
           <li>
-            <Link to={"#"}><span>Forum</span></Link>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/overfishing"}><span>OverFishing</span></Link>
 
           </li>
           <li>
-            <Link to={"#"}><span>Quizes</span></Link>
+            <Link to={"/quiz"}><span>Quizes</span></Link>
           </li>
-          <li><Link to={"#"}>Log In</Link></li>
+          <li><Link to={"/Login"}>Log In / Register</Link></li>
         </ul>
-      </Router>
-    </nav>
+
+      </nav>
+    </Router>
   );
 
 }

@@ -1,32 +1,22 @@
 import React, { Component } from "react";
+import {Render} from "react-dom";
 import Main from "./main";
 import OvrFsh from "./overfishing";
 import Polution from "./pollution";
 import Redtide from "./redtide";
+import { Router, Route } from "react-router";
+ 
 
-class Container extends Component {
-  state = {
-    currentPage: "Main"
-  };
+class Container extends React.Component {
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
-
-  renderPage = () => {
-    if (this.state.currentPage === "Main") {
-      return <Main />;
-    } else if (this.state.currentPage === "OvrFsh") {
-      return <OvrFsh />;
-    } else if (this.state.currentPage === "Polution") {
-      return <Polution />;
-    } else if (this.state.currentPage === "RedTide") {
-      return <Redtide />;
-    }
-  };
-
-  
-  }
-
-
+ render() {
+     return (
+         <div className="row">
+             <div> Stuff </div>
+         </div>
+         
+     );
+ }
+ 
+}
 export default Container;

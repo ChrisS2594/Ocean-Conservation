@@ -1,4 +1,5 @@
 import React from "react";
+import Redtide from "./redtide";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import "./../index.css";
@@ -8,12 +9,13 @@ import {
   Route,
   Link,
   useRouteMatch,
-  useParams
+  useParams,
+  //BrowserHistory
 } from "react-router-dom";
 //import OvrFsh from "./overfishing"
 
 
-function Main(){
+function Main() {
       return (
         <div>
           <br />
@@ -31,6 +33,8 @@ function Main(){
 
               
           </div>
+
+          
           <div className="splash">
             <h3 className="splash__title">Overfishing:</h3>
             <p className="splash__body">For many years we have taken advantage of the abundance that has been afforded to us from our ocean’s lakes and
@@ -55,9 +59,8 @@ function Main(){
             <p className="splash__body">While there are many health benefits to using red algae. And most algae blooms can be beneficial to ocean life as
               they provide food for ocean wildlife. There is a Small Portion of these algae blooms (also known as the red tide)
               that can produce toxins that can kill all plant and fish life within its vicinity.
-              <Router>
-              <Link to={"./redtide"}> Would you like to know more?</Link>
-              </Router></p>
+              
+            </p>
           </div>
         </div>
         

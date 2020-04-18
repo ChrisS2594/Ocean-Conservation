@@ -3,7 +3,7 @@ import Nav from "./Components/Nav/index"
 import "./App.scss";
 import Main from "./pages/main"
 import Foot from "./Components/Footer/Foot"
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
@@ -17,30 +17,30 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div className="App">
-        <div className="App-header">
-          <h1> C.C.M.R.J Oceanic Conservation</h1>
-           <Nav />
+        <div className="App">
+          <div className="App-header">
+            <h1> C.C.M.R.J Oceanic Conservation</h1>
+            <Nav />
 
-          <Route exact path="/" component={Main} />
-          <Route exact path="/overfishing" component={Overfsh} />
-          <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/" component={Polution} />
-          <Route exact path="/" component={Redtide} /> */}
-          <Route exact path="/register" component={Register} />
-          
+            <Route exact path="/" component={Main} />
+            <Route exact path="/overfishing" component={Overfsh} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/pollution" component={Polution} />
+            <Route exact path="/redtide" component={Redtide} />
+            <Route exact path="/register" component={Register} />
 
-      <Foot />
+
+            <Foot />
+          </div>
+
         </div>
-       
-      </div>
 
       </Router>
     );
   }
 
-  
-  
+
+
 
 
 

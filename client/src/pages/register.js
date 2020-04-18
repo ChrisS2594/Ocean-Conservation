@@ -22,6 +22,8 @@ export default function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    
+
 
     function validateForm() {
         return email.length > 0 && password.length > 0;

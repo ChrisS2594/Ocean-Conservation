@@ -52,9 +52,9 @@ function Main() {
               rivers that lately we have been seeing the effects of what overfishing is having on our ecosystems and
               biodiversity.
               Without Proper fish management we can only make the problem worse.
-              <Router>
-              <Link to="./overfishing"> Would you like to know more?</Link>
-              </Router>
+              
+              <Link to="/overfishing"> Would you like to know more?</Link>
+             
               </p>
               
             <br />
@@ -62,14 +62,15 @@ function Main() {
             <p className="splash__body">For many years we as humans have intentionally and unintentionally polluted our oceans with plastic and
               non-biodegradable items. This has caused severe damage and harm to our largest ecosystem on the planet including
               destroying habitats,
-              ocean wildlife migration patterns. As well as the death vital ecosystems.<Router>
-              <Link exact path={"/pollution"}> Would you like to know more?</Link>
-              </Router></p>
+              ocean wildlife migration patterns. As well as the death vital ecosystems.              <Link to={"/pollution"}> Would you like to know more?</Link>
+              </p>
             <br />
             <h3 className="splash__title">Red Algae/Red Tide:</h3>
             <p className="splash__body">While there are many health benefits to using red algae. And most algae blooms can be beneficial to ocean life as
               they provide food for ocean wildlife. There is a Small Portion of these algae blooms (also known as the red tide)
               that can produce toxins that can kill all plant and fish life within its vicinity.
+              <Link to={"/redtide"}> Would you like to know more?</Link>
+              
               
             </p>
           </div>

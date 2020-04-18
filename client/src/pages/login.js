@@ -12,22 +12,21 @@ import {
   useParams
 } from "react-router-dom";
 //import OvrFsh from "./overfishing"
-//import Axios from "axios";
+import Axios from "axios";
 
 
 
+// this section below is our put request to confirm login
 
+export default function loginUser(props) {
+ 
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
+  
+ 
   function handleSubmit(event) {
+    
     event.preventDefault();
+    props.loginUser();
   }
 
   return (
@@ -45,7 +44,7 @@ export default function Login() {
             autoFocus
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={e => props.setEmail(e.target.value)}
           />
         </FormGroup>
         </label>
@@ -55,7 +54,7 @@ export default function Login() {
           Password:
           <FormControl
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={e => props.setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>

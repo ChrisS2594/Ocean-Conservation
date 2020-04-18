@@ -5,7 +5,7 @@ import Redtide from "./redtide";
 //import Axios from "axios";
 import "./../App.scss";
 import {
-   BrowserRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link,
@@ -44,7 +44,9 @@ function Main() {
 
               
           </div>
-
+<div>
+  
+</div>
           
           <div className="splash">
             <h3 className="splash__title">Overfishing:</h3>
@@ -70,12 +72,12 @@ function Main() {
               they provide food for ocean wildlife. There is a Small Portion of these algae blooms (also known as the red tide)
               that can produce toxins that can kill all plant and fish life within its vicinity.
               <Link to={"/redtide"}> Would you like to know more?</Link>
-              
-              
             </p>
           </div>
         </div>
         
+        
+  
           );
   }
 

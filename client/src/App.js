@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
-//import Quiz from "./pages/quiz";
+import flashCardList from "./pages/flashCardList";
 import Polution from "./pages/pollution";
 import Register from "./pages/register";
 import axios from "axios";
@@ -59,6 +59,8 @@ function App() {
           <Route exact path="/pollution" component={Polution} />
           <Route exact path="/redtide" component={Redtide} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/flashCard" component={flashCardList}/>
+          
 
 
           <Foot />

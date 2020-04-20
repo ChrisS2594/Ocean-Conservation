@@ -32,7 +32,7 @@ function Nav() {
             </li>
 
           <li>
-            <Link to="/quiz"><span>Quizes</span></Link>
+            <Link to="/flashCard"><span>Quiz</span></Link>
           </li>
           <li><Link to="/login">Log In</Link></li>
         </ul>

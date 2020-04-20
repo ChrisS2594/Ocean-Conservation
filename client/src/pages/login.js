@@ -12,7 +12,7 @@ import {
   useParams
 } from "react-router-dom";
 //import OvrFsh from "./overfishing"
-import Axios from "axios";
+import axios from "axios";
 
 
 
@@ -43,7 +43,7 @@ export default function loginUser(props) {
           <FormControl
             autoFocus
             type="email"
-            value={email}
+            value={props.email}
             onChange={e => props.setEmail(e.target.value)}
           />
         </FormGroup>
@@ -53,14 +53,14 @@ export default function loginUser(props) {
         <FormGroup controlId="password" bsSize="large">
           Password:
           <FormControl
-            value={password}
+            value={props.password}
             onChange={e => props.setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>
         </label>
         <br/>
-        <Button className="btnsbmt" block bsSize="large" disabled={!validateForm()} type="submit">
+        <Button className="btnsbmt" block bsSize="large" disabled={!props.validateForm()} type="submit">
           Login
         </Button>
         <p>

@@ -11,7 +11,7 @@ app.use(express.json());
 const config = require("./config");
 mongoose.connect(config.dbUrl);
 mongoose.connection.on("conected", ()=>{
-    console.log("connection succes");
+    console.log("connection success");
 });
 
 //const connection = mongoose.Collection;
@@ -27,3 +27,4 @@ app.use("/users", usersRouter);
 app.listen(port, ()=>{
     console.log(`server runing on port: ${port}`);
 });
+

@@ -11,28 +11,82 @@ import {
     useRouteMatch,
     useParams
 } from "react-router-dom";
+
 //import OvrFsh from "./overfishing"
-//import Axios from "axios";
+import axios from "axios";
 
 
+export default class createuser extends component {
+    constructor (props) {
+        super(props);
+        this.onChangeLastName=this.onChangeLastName.bind(this);
+        this.onChangeFirstName=this.onChangeFirstName.bind(this);
+        this.onChangeEmail=this.onChangeEmail.bind(this);
+        this.onChangePassword=this.onChangePassword.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
+        this.State={
+            FirstName:"",
+            LastName:"",
+            Password:"",
+            Email:"",
+            
 
+        };
 
-
-export default function Register() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    }
+    onChangeFirstName(e) {
+        this.setState({
+            FirstName: e.target.value
+        });
+    }
     
-
-
-    function validateForm() {
-        return email.length > 0 && password.length > 0;
+    onChangeLastName(e) {
+        this.setState({
+            LastName: e.target.value
+        });
+    }
+    
+    onChangePassword(e) {
+        this.setState({
+            Password: e.target.value
+        });
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    onChangeEmail(e) {
+        this.setState({
+            Email: e.target.value
+        });
     }
 
+    onSubmit(e) {
+        const user={
+            FirstName: this.State.FirstName,
+            LastName: this.State.LastName,
+            Password: this.State.Password,
+            Email: this.State.Email
+        }
+        console.log(user);
+        this.setState({
+         FirstName: "",
+         LastName:"",
+         Password:"",
+         Email:""
+        });
+    }
+// export default function Register() {
+//     const [name, setName] = useState("");
+//     const [email, setEmail] = useState("");
+//     const [password, setPassword] = useState("");
+
+//     function validateForm() {
+//         return email.length > 0 && password.length > 0;
+//     }
+
+//     function handleSubmit(event) {
+//         event.preventDefault();
+//     }
+
+    render() {
     return (
 
         <div className="Register">
@@ -44,7 +98,18 @@ export default function Register() {
                     <FormControl
                             autoFocus
                             type="Name"
-                            value={name}
+                            value={FirstName}
+                            onChange={e => setName(e.target.value)}
+                        />
+                    </FormGroup>
+                </lable>
+                <lable>
+                <FormGroup controlId="LastName" bsSize="large">
+                       Last Name:
+                    <FormControl
+                            autoFocus
+                            type="Name"
+                            value={LastName}
                             onChange={e => setName(e.target.value)}
                         />
                     </FormGroup>
@@ -56,19 +121,19 @@ export default function Register() {
                     <FormControl
                         autoFocus
                         type="email"
-                        value={email}
+                        value={Email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </FormGroup>
                 </lable>
                
                 <lable className="frmlbl">
-                <FormGroup controlId="password" bsSize="large">
+                <FormGroup controlId="Password" bsSize="large">
                     Password:
                     <FormControl
-                        value={password}
+                        value={Password}
                         onChange={e => setPassword(e.target.value)}
-                        type="password"
+                        type="Password"
                     />
                 </FormGroup>
                 </lable>
@@ -76,9 +141,9 @@ export default function Register() {
                 <FormGroup controlId="passwordconfirm" bsSize="large">
                     Confirm Password:
                     <FormControl
-                        value={password}
+                        value={Password}
                         onChange={e => setPassword(e.target.value)}
-                        type="password"
+                        type="Password"
                     />
                 </FormGroup>
                 </lable>
@@ -90,4 +155,10 @@ export default function Register() {
         </div>
     );
 }
-
+}
+// export function Restister() {
+//     <div>
+//         <Form />
+//     </div>
+// }
+// export default Form;

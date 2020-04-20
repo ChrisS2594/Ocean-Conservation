@@ -6,15 +6,15 @@ export default function flashCardList({ flashcards }) {
     const flashCards = [
         {
             id: 1,
-            question: 'Does plastic break down in sea water',
-            answer: 'False. It is very difficult for plastic to break down in sea water.  Latest estimates that plastic can take up to 450 years for it to break down. ',
+            question: 'Does plastic break down in sea water?',
+            answer: 'False. It is very difficult for plastic to break down in sea water. Latest estimates that plastic can take anywhere from 20-600 years for it plastic to decompose. ',
             options: [
                 'true',
                 'false'
                 
           
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://blogs.ei.columbia.edu/2011/01/26/our-oceans-a-plastic-soup/'
         },
         {
             id: 2,
@@ -23,14 +23,15 @@ export default function flashCardList({ flashcards }) {
             options: [
                 'The Hudson River',
                 'The Colorado River',
-                'The Ganges.'
+                'The Ganges',
+                'The Yellow River'
                 
             ],
             src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
         },
         {
             id: 3,
-            question: 'Does government subsidies of Large-scale fishing contribute to over-fishing?',
+            question: 'Do government subsidies of Large-scale fishing contribute to over-fishing?',
             answer: 'True. Subsidies can lead to overcapacity of fishing vessels and skewing of production costs so that fishing operations continue when they would otherwise not make economic sense',
             options: [
                 'True',
@@ -42,15 +43,15 @@ export default function flashCardList({ flashcards }) {
         },
         {
             id: 4,
-            question: 'What river is the most polluted?',
+            question: 'Over eight million metric tons of plastic end up in the ocean every year.',
             answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
             options: [
-                'The Hudson River',
-                'The Colorado River',
-                'The Ganges.'
+                'True',
+                'False',
+                'Im not sure.'
                 
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://www.nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/'
         },
         {
             id: 5,
@@ -66,27 +67,27 @@ export default function flashCardList({ flashcards }) {
         },
         {
             id: 6,
-            question: 'What river is the most polluted?',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            question: 'Is the Red Tide harmful to humans?',
+            answer: 'Harmful algal blooms (Red Tide), or HABs, occur when colonies of algae—simple plants that live in the sea and freshwater—grow out of control while producing toxic or harmful effects on people, fish, shellfish, marine mammals, and birds. The human illnesses caused by HABs, though rare, can be debilitating or even fatal.',
             options: [
-                'The Hudson River',
-                'The Colorado River',
-                'The Ganges.'
+                'True',
+                'False'
+                
                 
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://oceanservice.noaa.gov/facts/redtide.html'
         },
         {
             id: 7,
-            question: 'What river is the most polluted?',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            question: 'Can humans have worsening effects of the red tide?',
+            answer: 'Chemicals from farming, factories, sewage treatment plants and other sources can become dissolved in water on the land. This water, called runoff, eventually flows into the ocean and can cause algae to grow faster, leading to red tides.',
             options: [
-                'The Hudson River',
-                'The Colorado River',
-                'The Ganges.'
+                'True',
+                'False',
+                'I do not know'
                 
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://scijinks.gov/red-tide/'
         },
         {
             id: 8,

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, setState,  } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-//import Carousel, { Dots } from '@brainhubeu/react-carousel';
-//import '@brainhubeu/react-carousel/lib/style.css';
 import "./../App.scss";
 import {
     BrowserRouter as Router,
@@ -16,14 +14,10 @@ import {
 import axios from "axios";
 
 
-export default class createuser extends component {
+class createuser extends component {
     constructor (props) {
         super(props);
-        this.onChangeLastName=this.onChangeLastName.bind(this);
-        this.onChangeFirstName=this.onChangeFirstName.bind(this);
-        this.onChangeEmail=this.onChangeEmail.bind(this);
-        this.onChangePassword=this.onChangePassword.bind(this);
-        this.onSubmit=this.onSubmit.bind(this);
+        
         this.State={
             FirstName:"",
             LastName:"",
@@ -32,7 +26,12 @@ export default class createuser extends component {
             
 
         };
-
+        this.onChangeLastName=this.onChangeLastName.bind(this);
+        this.onChangeFirstName=this.onChangeFirstName.bind(this);
+        this.onChangeEmail=this.onChangeEmail.bind(this);
+        this.onChangePassword=this.onChangePassword.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
+        
     }
     onChangeFirstName(e) {
         this.setState({
@@ -73,92 +72,28 @@ export default class createuser extends component {
          Email:""
         });
     }
-// export default function Register() {
-//     const [name, setName] = useState("");
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
 
-//     function validateForm() {
-//         return email.length > 0 && password.length > 0;
-//     }
 
-//     function handleSubmit(event) {
-//         event.preventDefault();
-//     }
 
     render() {
     return (
 
         <div className="Register">
             <p className="register__title">Register below</p>
-            <form onSubmit={handleSubmit}>
-                <lable className="frmlbl">
-                    <FormGroup controlId="email" bsSize="large">
-                        Name:
-                    <FormControl
-                            autoFocus
-                            type="Name"
-                            value={FirstName}
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </FormGroup>
-                </lable>
-                <lable>
-                <FormGroup controlId="LastName" bsSize="large">
-                       Last Name:
-                    <FormControl
-                            autoFocus
-                            type="Name"
-                            value={LastName}
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </FormGroup>
-                </lable>
-              
-                <lable className="frmlbl">
-                <FormGroup controlId="email" bsSize="large">
-                    Email:
-                    <FormControl
-                        autoFocus
-                        type="email"
-                        value={Email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
-                </FormGroup>
-                </lable>
-               
-                <lable className="frmlbl">
-                <FormGroup controlId="Password" bsSize="large">
-                    Password:
-                    <FormControl
-                        value={Password}
-                        onChange={e => setPassword(e.target.value)}
-                        type="Password"
-                    />
-                </FormGroup>
-                </lable>
-                <lable className="frmlbl">
-                <FormGroup controlId="passwordconfirm" bsSize="large">
-                    Confirm Password:
-                    <FormControl
-                        value={Password}
-                        onChange={e => setPassword(e.target.value)}
-                        type="Password"
-                    />
-                </FormGroup>
-                </lable>
-                <br />
-                <Button className="btnsbmt" block bsSize="large" disabled={!validateForm()} type="submit">
-                    Submit
-        </Button>
-            </form>
+            {this.State.success === false &&
+            <p className="aler aler-danger" role="alert">
+                {this.state.message}
+                </p>
+                }
+                {this.state.success === true &&
+                <p className="alert alert-success" roler="alert">
+                    User Registered
+                    </p>}
+                   {this.State.success &&
+                   <form onSubmit={this.onSubmit}>
+                       </form>} 
         </div>
     );
 }
 }
-// export function Restister() {
-//     <div>
-//         <Form />
-//     </div>
-// }
-// export default Form;
+export default createuser;

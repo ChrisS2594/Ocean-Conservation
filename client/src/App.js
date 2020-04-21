@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
-import flashCardList from "./pages/flashCardList";
+//import Quiz from "./pages/quiz";
 import Polution from "./pages/pollution";
-import Register from "./pages/register";
+import CreateUser from "./pages/register";
 import axios from "axios";
 
 
@@ -58,9 +58,7 @@ function App() {
           <Route exact path="/login" render={(props) => <Login {...props} setPassword={setPassword} password={password} email={email} validateForm={validateForm} loginUser={loginUser} setEmail={setEmail} />} />
           <Route exact path="/pollution" component={Polution} />
           <Route exact path="/redtide" component={Redtide} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/flashCard" component={flashCardList}/>
-          
+          <Route exact path="/register" component={CreateUser} />
 
 
           <Foot />

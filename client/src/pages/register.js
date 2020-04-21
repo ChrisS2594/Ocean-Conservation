@@ -1,4 +1,4 @@
-import React, { useState, setState,  } from "react";
+import React, { Component, useState, setState, } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./../App.scss";
 import {
@@ -14,37 +14,37 @@ import {
 import axios from "axios";
 
 
-class createuser extends component {
-    constructor (props) {
+class CreateUser extends Component {
+    constructor(props) {
         super(props);
-        
-        this.State={
-            FirstName:"",
-            LastName:"",
-            Password:"",
-            Email:"",
-            
+
+        this.state = {
+            FirstName: "",
+            LastName: "",
+            Password: "",
+            Email: ""
+
 
         };
-        this.onChangeLastName=this.onChangeLastName.bind(this);
-        this.onChangeFirstName=this.onChangeFirstName.bind(this);
-        this.onChangeEmail=this.onChangeEmail.bind(this);
-        this.onChangePassword=this.onChangePassword.bind(this);
-        this.onSubmit=this.onSubmit.bind(this);
-        
+        this.onChangeLastName = this.onChangeLastName.bind(this);
+        this.onChangeFirstName = this.onChangeFirstName.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+
     }
     onChangeFirstName(e) {
         this.setState({
             FirstName: e.target.value
         });
     }
-    
+
     onChangeLastName(e) {
         this.setState({
             LastName: e.target.value
         });
     }
-    
+
     onChangePassword(e) {
         this.setState({
             Password: e.target.value
@@ -58,42 +58,58 @@ class createuser extends component {
     }
 
     onSubmit(e) {
-        const user={
-            FirstName: this.State.FirstName,
-            LastName: this.State.LastName,
-            Password: this.State.Password,
-            Email: this.State.Email
+        e.preventDefault();
+        const user = {
+            FirstName: this.state.FirstName,
+            LastName: this.state.LastName,
+            Password: this.state.Password,
+            Email: this.state.Email
+            
         }
         console.log(user);
         this.setState({
-         FirstName: "",
-         LastName:"",
-         Password:"",
-         Email:""
+            FirstName: "",
+            LastName: "",
+            Password: "",
+            Email: ""
         });
     }
 
 
 
     render() {
-    return (
-
-        <div className="Register">
-            <p className="register__title">Register below</p>
-            {this.State.success === false &&
-            <p className="aler aler-danger" role="alert">
-                {this.state.message}
-                </p>
+        return (
+            <div className="Register">
+                <p className="register__title">Register below</p>
+                {this.state.success === false &&
+                    <p className="alert alert-danger" role="alert">
+                        something Happened we dont like
+                    </p>
                 }
                 {this.state.success === true &&
-                <p className="alert alert-success" roler="alert">
-                    User Registered
+                    <p className="alert alert-success" role="alert">
+                        User Registered
                     </p>}
-                   {this.State.success &&
-                   <form onSubmit={this.onSubmit}>
-                       </form>} 
-        </div>
-    );
+                {this.state.success &&
+                    <form onSubmit={this.onSubmit}>
+                    </form>}
+
+                {!this.state.success &&
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                            <label> First Name</label>
+                            <input type="text" className="form-control" placeholder="First name" name="FirstName" required onChange={this.onChangeFirstName} /></div>
+                        <div className="form-group">
+                            <label>Last Name</label>
+                            <input type="text" className="form-control" placeholder="Last Name" name="LastName" required onChange={this.onChangeLastName} /></div>
+
+                            <button type="submit" className="btn btn-primary">Submit</button>
+
+                    </form>
+                    
+                }
+            </div>
+        );
+    }
 }
-}
-export default createuser;
+export default CreateUser;

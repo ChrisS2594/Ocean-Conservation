@@ -21,9 +21,19 @@ const userSchema = new Schema({
     createdEvents: [{
         type: Schema.Types.ObjectId,
         ref: "Event"
-    }]
+    }],
+    isDeleted:{
+        type:Boolean,
+        default:false
+    }
 
 
     });
+    userSchema.methods.generateHash = password => {
+        return bcrypt.hashSync(password, bcrypt.genSaltSync(8),null);
+    };
+    userSchema.methods.validPassword = password => {
+        return bcrypt.compareSync(password, this.password);
+    };
 const User = mongoose.model("User", userSchema);
 module.exports = User;

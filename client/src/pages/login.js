@@ -38,7 +38,13 @@ class Login extends Component {
     e.preventDefault()
     console.log(this.state);
     API.loginUser(this.state)
-    .then(res => console.log(res.data))
+    .then(res => {
+      console.log(res.data)
+      //check if login was successful, if user info comes back
+      //if successful rout to to logedin state!!
+      //pass hello user 
+      //else trow err
+    })
   }
   render() {
     return(

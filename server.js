@@ -20,10 +20,11 @@ mongoose.connection.on("conected", ()=>{
 // });
 const usersRouter = require("./routes/users");
 const eventsRouter = require("./routes/events");
+const userSession = require("./routes/login");
 
 app.use("/events", eventsRouter);
 app.use("/users", usersRouter);
-
+app.use("/login", userSession);
 app.listen(port, ()=>{
     console.log(`server runing on port: ${port}`);
 });

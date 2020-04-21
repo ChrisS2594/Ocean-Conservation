@@ -1,6 +1,7 @@
-import React, { Component, useState, setState, } from "react";
+import React, { useEffect, Component, useState, setState, } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./../App.scss";
+import API from "../utils/api";
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,17 +13,17 @@ import {
 
 //import OvrFsh from "./overfishing"
 import axios from "axios";
-
+ 
 
 class CreateUser extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            FirstName: "",
-            LastName: "",
-            Password: "",
-            Email: ""
+            firstName: "",
+            lastName: "",
+            password: "",
+            email: ""
 
 
         };
@@ -35,46 +36,49 @@ class CreateUser extends Component {
     }
     onChangeFirstName(e) {
         this.setState({
-            FirstName: e.target.value
+            firstName: e.target.value
         });
     }
 
     onChangeLastName(e) {
         this.setState({
-            LastName: e.target.value
+            lastName: e.target.value
         });
     }
 
     onChangePassword(e) {
         this.setState({
-            Password: e.target.value
+            password: e.target.value
         });
     }
 
     onChangeEmail(e) {
         this.setState({
-            Email: e.target.value
+            email: e.target.value
         });
     }
 
     onSubmit(e) {
         e.preventDefault();
         const user = {
-            FirstName: this.state.FirstName,
-            LastName: this.state.LastName,
-            Password: this.state.Password,
-            Email: this.state.Email
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            password: this.state.password,
+            email: this.state.email
             
         }
+        console.log(user)
+        API.addUser(user)
+       
         console.log(user);
         this.setState({
-            FirstName: "",
-            LastName: "",
-            Password: "",
-            Email: ""
+            firstName: "",
+            lastName: "",
+            password: "",
+            email: ""
         });
     }
-
+//stores users
 
 
     render() {
@@ -102,7 +106,11 @@ class CreateUser extends Component {
                         <div className="form-group">
                             <label>Last Name</label>
                             <input type="text" className="form-control" placeholder="Last Name" name="LastName" required onChange={this.onChangeLastName} /></div>
-
+                            <div form-group>
+                                <input className="form-control" type="text" placeholder="Email" name="Email" required onChange={this.onChangeEmail} /></div>
+                            <div className="form-control" >
+                                <input className="form" type="text" placeholder="Password" name="Password" require onChange={this.onChangePassword} />
+                            </div>
                             <button type="submit" className="btn btn-primary">Submit</button>
 
                     </form>

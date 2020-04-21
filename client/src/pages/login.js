@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 //import '@brainhubeu/react-carousel/lib/style.css';
 import "./../App.scss";
+import API from "../utils/api";
 import {
    BrowserRouter as Router,
   Switch,
@@ -18,56 +19,47 @@ import axios from "axios";
 
 // this section below is our put request to confirm login
 
-export default function loginUser(props) {
- 
+class Login extends Component {
+  constructor(props) {
+    super(props);
 
-  
- 
-  function handleSubmit(event) {
+    this.state ={
+      email:"",
+      password:""
+    };
     
-    event.preventDefault();
-    props.loginUser();
   }
+  onChange=(e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+  onSubmit=(e) => {
+    e.preventDefault()
+    console.log(this.state);
+    API.loginUser(this.state)
+    .then(res => console.log(res.data))
+  }
+  render() {
+    return(
+      <div className="Register">
+                <p className="register__title">Log In</p>
+           
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                                <input className="form-control" type="text" placeholder="Email" name="email" required onChange={this.onChange} /></div>
+                            <div className="form-control" >
+                                <input className="form" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
+                            </div>
+                            <button type="submit" className="btn btn-primary">Submit</button>
 
-  return (
-    
-    <div className="Login">
-      <h3 className="login__title">Please Sign In</h3>
-      
-      
-      <form className="login__body" onSubmit={handleSubmit}>
-        <label>
-        <FormGroup controlId="email" bsSize="large">
-          Email:
-          
-          <FormControl
-            autoFocus
-            type="email"
-            value={props.email}
-            onChange={e => props.setEmail(e.target.value)}
-          />
-        </FormGroup>
-        </label>
-        <br/>
-        <label>
-        <FormGroup controlId="password" bsSize="large">
-          Password:
-          <FormControl
-            value={props.password}
-            onChange={e => props.setPassword(e.target.value)}
-            type="password"
-          />
-        </FormGroup>
-        </label>
-        <br/>
-        <Button className="btnsbmt" block bsSize="large" disabled={!props.validateForm()} type="submit">
-          Login
-        </Button>
-        <p>
-        <Link to="/register">Register here</Link>
-        </p>
-      </form>
-    </div>
-  );
+                    </form>
+                    
+                
+            </div>
+     
+    );
+  }
 }
 
+export default Login;

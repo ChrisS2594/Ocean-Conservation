@@ -28,7 +28,7 @@ export default function Flashcard({ flashcard }) {
         style={{ height: height}}
         onClick={() => setFlip(!flip)}
         >
-            <div className="front" ref={frontEl}>
+            <div className="front" ref={frontEl} style={{color:"#000"}}>
                {flashcard.question}
                <div className="flashcard-options">
                  {flashcard.options.map(option => {
@@ -38,7 +38,7 @@ export default function Flashcard({ flashcard }) {
                </div> 
                
             </div>
-            <div className="back" ref={backEl}>{flashcard.answer} <a href={flashcard.src}>Click Here</a></div>  
+            <div className="back" style ={{color:"#000"}} ref={backEl}>{flashcard.answer} <a href={flashcard.src}>Click Here</a></div>  
         </div>
     )
 }    

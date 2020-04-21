@@ -224,7 +224,7 @@ body {
 
 
 
-
+/*styles for flashcards need to figure out how to impliment into App.scss */
 .card-grid {
   display: grid;
   align-items: center;

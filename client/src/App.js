@@ -11,6 +11,8 @@ import Login from "./pages/login";
 import Polution from "./pages/pollution";
 import CreateUser from "./pages/register";
 import axios from "axios";
+import Flashcard from "./pages/flashCard";
+import flashCardList from "./pages/flashCardList";
 
 
 
@@ -59,7 +61,7 @@ function App() {
           <Route exact path="/pollution" component={Polution} />
           <Route exact path="/redtide" component={Redtide} />
           <Route exact path="/register" component={CreateUser} />
-
+          <Route exact path="/flashCard" component={flashCardList} />
 
           <Foot />
         </div>

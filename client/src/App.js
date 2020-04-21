@@ -40,10 +40,7 @@ function App() {
         // If there's an error, log the error
       });
 
-    // .catch(function() {
-    //   axios.alert("#alert .msg").text("The email and/or password you've entered is incorrect");
-    //   axios.alert("#alert").fadeIn(500);
-    // });
+    
   }
   return (
     <Router>

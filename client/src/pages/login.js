@@ -42,7 +42,7 @@ class Login extends Component {
   }
   render() {
     return(
-      <Router>
+      
       <div className="Register">
                 <p className="register__title">Log In</p>
            
@@ -58,7 +58,7 @@ class Login extends Component {
                     
                 
             </div>
-            </Router>
+            
     );
   }
 }

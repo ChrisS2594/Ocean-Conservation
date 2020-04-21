@@ -8,12 +8,12 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-// import { DropdownItem, Dropdown, DropdownMenu } from "react-bootstrap";
-
+import { Dropdown, Dropdownitem, DropdownMenu}  from 'react-dropdown';
 
 // this index.js runs the Nav bar on the app
 function Nav() {
   return (
+
       <nav id="nav" role="navigation">
         <a href="#nav" title="Show navigation">Show navigation</a>
         <a href="#" title="Hide navigation">Hide navigation</a>
@@ -23,16 +23,17 @@ function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            {/* <Dropdown.toggle variant="success" id="dropdown-basic"><span>Pages</span></Dropdown.toggle>
-          <DropdownMenu>
-            <Dropdownitem Link to="/overfishing">Over Fishing</Dropdownitem>
-            <Dropdownitem Link to="/pollution">Pollution</Dropdownitem>
-            <Dropdownitem Link to="/redtide">Red Tide</Dropdownitem>
-            </DropdownMenu> */}
+            <a href="/" aria-haspopup="true"><span>Pages</span></a>
+            <ul>
+            <li><Link to="/overfishing">Over Fishing</Link></li>
+            <li><Link to="/pollution">Pollution</Link></li>
+            <li><Link to="/redtide">Red Tide</Link></li>
+            
+            </ul>
             </li>
 
           <li>
-            <Link to="/flashCard"><span>Quiz</span></Link>
+            <Link to="/flashCard">Test Your Knowledge</Link>
           </li>
           <li><Link to="/login">Log In</Link></li>
         </ul>

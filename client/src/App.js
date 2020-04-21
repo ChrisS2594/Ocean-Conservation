@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Redtide from "./pages/redtide";
 import Overfsh from "./pages/overfishing";
 import Login from "./pages/login";
-//import Quiz from "./pages/quiz";
 import Polution from "./pages/pollution";
 import CreateUser from "./pages/register";
 import axios from "axios";

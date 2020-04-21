@@ -5,10 +5,12 @@
     left: 15%;
     margin-left: -15em; /* 30 480 */
     margin-top:1em;
+    z-index:2;
    
   }
   #nav > a {
     display: none;
+    
     
   }
   #nav li {
@@ -17,9 +19,11 @@
   #nav li a {
     color: #fff;
     display: block;
+    
   }
   #nav li a:active {
     background-color: blue !important;
+    
   }
   #nav span:after {
     width: 0;
@@ -38,24 +42,33 @@
   #nav > ul {
       height: 3.75em; /* 60 */
       background-color: rgb(101, 101, 121);
+      
   }
   #nav > ul > li {
       width: 25%;
       height: 100%;
       float: left;
+      
+      
   }
   #nav > ul > li > a {
       height: 100%;
       font-size: 1.5em; /* 24 */
       line-height: 2.5em; /* 60 (24) */
       text-align: center;
+      
+      
   }
   #nav > ul > li:not( :last-child ) > a {
       border-right: 1px solid blue;
+      
+      
   }
   #nav > ul > li:hover > a,
   #nav > ul:not( :hover ) > li.active > a {
       background-color: burlywood;
+      
+      
   }
   /* second level */
   #nav li ul {
@@ -68,24 +81,30 @@
       display: block;
       left: 0;
       right: 0;
+      position: absolute;
+      
   }
   #nav li:not( :first-child ):hover ul {
       left: -1px;
+      
   }
   #nav li ul a {
       font-size: 1.25em; /* 20 */
       border-top: 1px solid  burlywood;
       padding: 0.75em; /* 15 (20) */
+      
   }
   #nav li ul li a:hover,
   #nav li ul:not( :hover ) li.active a {
       background-color: grey;
+      
   }
   @media only screen and ( max-width: 62.5em ) { /* 1000 */
       #nav {
           width: 100%;
           position: static;
           margin: 0;
+          
       }
   }
   @media only screen and ( max-width: 40em ) /* 640 */
@@ -105,6 +124,8 @@
           text-indent: -9999px;
           background-color: #e15a1f;
           position: relative;
+          
+          
       }
       #nav > a:before,
       #nav > a:after {
@@ -114,9 +135,12 @@
           left: 25%;
           right: 25%;
           content: '';
+         
       }
       #nav > a:after {
         top: 60%;
+        
+        
     }
     #nav:not( :target ) > a:first-of-type,
     #nav:target > a:last-of-type {
@@ -129,6 +153,7 @@
         position: absolute;
         left: 0;
         right: 0;
+        
     }
     #nav:target > ul {
         display: block;
@@ -136,21 +161,25 @@
     #nav > ul > li {
         width: 100%;
         float: none;
+        
     }
     #nav > ul > li > a {
         height: auto;
         text-align: left;
         padding: 0 0.833em; /* 20 (24) */
+        
     }
     #nav > ul > li:not( :last-child ) > a {
         border-right: none;
         border-bottom: 1px solid #cc470d;
+        
     }
     /* second level */
     #nav li ul {
-        position: static;
+        position: absolute;
         padding: 1.25em; /* 20 */
         padding-top: 0;
+        
     }
 }
 img.bg {
@@ -166,11 +195,13 @@ img.bg {
   position: fixed;
   top: 0;
   left: 0;
+  
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   img.bg {
     left: 50%;
     margin-left: -512px;   /* 50% */
+    
   }
 }

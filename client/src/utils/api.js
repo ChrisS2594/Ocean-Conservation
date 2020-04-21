@@ -7,6 +7,10 @@ export default {
     },
     loginUser: function(login) {
         return axios.post('/login/users/login', login);
+    },
+    userLoggedin: function(logged) {
+        return axios.get('/login/users/login' , logged);
     }
 }
+
 

@@ -6,7 +6,7 @@ export default {
 
     },
     loginUser: function(login) {
-        return axios.post('/users', login);
+        return axios.post('/users/login', login);
     }
 }
 

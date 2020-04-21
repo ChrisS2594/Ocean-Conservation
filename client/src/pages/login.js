@@ -42,6 +42,7 @@ class Login extends Component {
   }
   render() {
     return(
+      <Router>
       <div className="Register">
                 <p className="register__title">Log In</p>
            
@@ -52,12 +53,12 @@ class Login extends Component {
                                 <input className="form" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
                             </div>
                             <button type="submit" className="btn btn-primary">Submit</button>
-
+                      <Link to="/register">Register Here</Link>
                     </form>
                     
                 
             </div>
-     
+            </Router>
     );
   }
 }

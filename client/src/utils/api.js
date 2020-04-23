@@ -10,6 +10,10 @@ export default {
     },
     userLoggedin: function(logged) {
         return axios.get('/login/users/login' , logged);
+    },
+
+    forum: function(forum) {
+        return axios.get('/events/', forum);
     }
 }
 

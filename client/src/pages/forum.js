@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useState, Component } from "react";
 import { FormGroup } from "react-bootstrap";
+import API from "../utils/api";
+import "./../App.scss";
+import axios from "axios";
 
+const Event = require ("../../../models/events.model");
 
 class Forum extends Component {
 constructor(props) {
     super(props);
 
     this.state ={
-      email:"",
-      password:""
+      event:""
     };
     
   }
   onChange=(e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.event]: e.target.value
     });
   }
   onSubmit=(e) => {
     e.preventDefault()
     console.log(this.state);
-    API.loginUser(this.state)
+    API.event(this.state)
     .then(res => {
       console.log(res.data)
       //check if login was successful, if user info comes back
@@ -34,7 +37,7 @@ constructor(props) {
       
       <div className="Register">
                 <p className="register__title">Community Message Board</p>
-           
+                    
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
                                 <input className="form-control" type="text" placeholder="Type Here" name="message" required onChange={this.onChange} /></div>

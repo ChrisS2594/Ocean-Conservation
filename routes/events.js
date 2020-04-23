@@ -22,6 +22,7 @@ router.route("/add").post((req, res)=>{
 newEvent.save()
 .then(()=> res.json("event added!"))
 .catch(err=> res.status(400).json("Error:" + err));
+console.log("im here", save);
 });
 
 module.exports = router;

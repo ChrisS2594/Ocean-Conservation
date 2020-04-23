@@ -10,9 +10,9 @@ import Login from "./pages/login";
 import Polution from "./pages/pollution";
 import CreateUser from "./pages/register";
 import axios from "axios";
-import Flashcard from "./pages/flashCard";
+// import Flashcard from "./pages/flashCard";
 import flashCardList from "./pages/flashCardList";
-import Forum from "./pages/forum";
+import Event from "./pages/forum";
 import Game from "./pages/game";
 
 
@@ -24,13 +24,15 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState("");
+  const [event, setEvent] = useState("");
+  const [message, setMessage] = useState("");
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
 
 
   function loginUser(email, password) {
-    console.log("hitmebabyonemoretime");
+    console.log("Logged in");
     axios.post("http://localhost:3001/users/", {
       email: email,
       password: password
@@ -58,7 +60,7 @@ function App() {
           <Route exact path="/redtide" component={Redtide} />
           <Route exact path="/register" component={CreateUser} />
           <Route exact path="/flashCard" component={flashCardList} />
-          <Route exact path="/messageboard" component={Forum} />
+          <Route exact path="/messageboard" render={(props) => <Event {...props} setEvent={setEvent} setMessage={setMessage} />} component={Event}  />
           <Route exact path="/interactivegame" component={Game} />
           <Foot />
         </div>

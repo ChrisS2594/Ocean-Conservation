@@ -13,7 +13,7 @@ import axios from "axios";
 import Flashcard from "./pages/flashCard";
 import flashCardList from "./pages/flashCardList";
 import Forum from "./pages/forum";
-
+import Game from "./pages/game";
 
 
 
@@ -59,6 +59,7 @@ function App() {
           <Route exact path="/register" component={CreateUser} />
           <Route exact path="/flashCard" component={flashCardList} />
           <Route exact path="/messageboard" component={Forum} />
+          <Route exact path="/interactivegame" component={Game} />
           <Foot />
         </div>
 

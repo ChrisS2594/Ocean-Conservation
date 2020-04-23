@@ -11,13 +11,22 @@ res.json({status:"success"})
 
 )
 router.route("/").get((req, res)=> {
-    console.log(req.body)
     user.find()
     .then(user=> res.json(user))
     .catch(err=> res.status(400).json("Error:" + err));
 
+    /*
+    if (req.session.isLoggedIn){
+        // Do what you would normally do in a route.
+        // leave code in here that you want to atuthenticate
+        
+    } else {
+        res.status(401).json({msg: "user not verified"})
+    }
+    */
 
 });
+
 router.route("/add").post((req, res)=> {
     console.log( "this is the response or request",req.body);
     const email = req.body.email;

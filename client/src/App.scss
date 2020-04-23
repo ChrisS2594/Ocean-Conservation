@@ -160,7 +160,7 @@ img.bg {
       background-repeat: no-repeat;
       background-size: cover;
       height: 100%;
-      font-family: 'Crimson Text', serif;;
+      font-family:'Amiri', serif;
       
     }
     
@@ -180,12 +180,14 @@ img.bg {
     padding: 15px 15px 25px 15px;
     background-color: #ffffff;
     text-align: center;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
     border: 2px solid black;
     margin: 10% auto;
     width:25% ;
     height:275px;
     opacity: 0.6;
     border-radius: 25px
+    
     
     }
   
@@ -226,9 +228,12 @@ img.bg {
     }
     .btnsbmt {
       border-radius: 25px;
+      cursor: pointer;
     }
 
     
+
+    }
 
     .Register {
       padding: 15px 15px 25px 15px;
@@ -317,7 +322,19 @@ transform: rotateY(180deg);
   margin-top: .25rem;
   color: #555;
   font-size: .75rem;
+  transition: 0.4s linear all;
+  text-align: center;
 }
+.flashcard-option span {
+  transition: 0.4s linear all;
+}
+.flashcard-option span:hover {
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: .5em;
+}
+
+
 
 .flashcard-option:first-child {
   margin-top: 0;

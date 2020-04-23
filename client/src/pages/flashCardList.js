@@ -10,8 +10,8 @@ export default function flashCardList({ flashcards }) {
             question: 'Does plastic break down in sea water?',
             answer: 'False. It is very difficult for plastic to break down in sea water. Latest estimates that plastic can take anywhere from 20-600 years for it plastic to decompose. ',
             options: [
-                'true',
-                'false'
+                'True',
+                'False'
                 
           
             ],

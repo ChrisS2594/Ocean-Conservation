@@ -58,7 +58,7 @@ class Login extends Component {
                             <div className="form-control" >
                                 <input className="form" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
                             </div>
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary loginbtn">Submit</button>
                       <Link to="/register">Register Here</Link>
                     </form>
                     

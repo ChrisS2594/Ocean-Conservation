@@ -28,6 +28,7 @@ function Nav() {
             <li><Link to="/overfishing">Over Fishing</Link></li>
             <li><Link to="/pollution">Pollution</Link></li>
             <li><Link to="/redtide">Red Tide</Link></li>
+            <li><Link to="/messageboard">Message Board</Link></li>
             
             </ul>
             </li>

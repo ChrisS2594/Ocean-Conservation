@@ -12,7 +12,7 @@ import CreateUser from "./pages/register";
 import axios from "axios";
 import Flashcard from "./pages/flashCard";
 import flashCardList from "./pages/flashCardList";
-
+import Forum from "./pages/forum";
 
 
 
@@ -58,7 +58,7 @@ function App() {
           <Route exact path="/redtide" component={Redtide} />
           <Route exact path="/register" component={CreateUser} />
           <Route exact path="/flashCard" component={flashCardList} />
-
+          <Route exact path="/messageboard" component={Forum} />
           <Foot />
         </div>
 

@@ -14,6 +14,9 @@ export default {
 
     forum: function(forum) {
         return axios.get('/events/', forum);
+    },
+    forumadd: function(add){
+        return axios.post('/events/add', add);
     }
 }
 

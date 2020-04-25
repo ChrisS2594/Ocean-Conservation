@@ -50,10 +50,11 @@ class Login extends Component {
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
                                 <input className="form-control" type="text" placeholder="Email" name="email" required onChange={this.onChange} /></div>
-                            <div className="form-control" >
-                                <input className="form" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
+                            <div className="form-group" >
+                                <input className="form-control" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
                             </div>
                             <button type="submit" className="btn btn-primary loginbtn">Submit</button>
+                            <br/>
                       <Link to="/register">Register Here</Link>
                     </form>
                     

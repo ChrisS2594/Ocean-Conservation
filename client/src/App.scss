@@ -13,12 +13,12 @@ body {
 }
 
 .App-header {
-  background-color: #222  ;
-  height: 100px;
+  background-color: #222 ;
+  height:150px;
   padding: 20px;
   margin: 1rem 1rem;
   border-radius: .25rem;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
   color: white;
 }
 
@@ -34,29 +34,40 @@ body {
 * {
     box-sizing: border-box;
   }
-  html,
-  body {
-    height: 100%;
-    min-height: 600px;
-  }
-  body {
-    
-    background: url(ocean.jpg) ;
-    background-repeat: no-repeat;
+
+
+  html { 
+    background: url(ocean.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
-    font-family: 'roboto', 'helvetica neue', arial, sans-serif;
-    
   }
   
-  
+  // html,
+  // body {
+  //   height: 100%;
+  //   min-height: 600px;
+  // }
+  // body {
+    
+  //   background: url(ocean.jpg) ;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   height: 100%;
+  //   font-family: 'roboto', 'helvetica neue', arial, sans-serif;
+    
+    
+  // }
+
+    
   /* --- Intro text to the page --- */
   .intro {
     padding: 15px 15px 25px 15px;
     background-color: #ffffff;
     text-align: center;
     border: 2px solid black;
-    margin: 0% auto;
+    margin: 3% auto;
     width: 900px;
     opacity: 0.6;
     border-radius: 25px;
@@ -72,7 +83,7 @@ body {
     color: black;
     font-size: 16px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 10;
     padding: 0 160px;
     margin: 0;
@@ -131,8 +142,10 @@ img.bg {
   }
   
   .App-header {
-    background-color: #222  ;
-    height: 100px;
+    background-color: rgb(23, 164, 211)  ;
+    opacity: .7;
+    margin-bottom: 5em;
+    height: 150px;
     padding: 20px;
     color: white;
   }
@@ -164,6 +177,7 @@ img.bg {
       
     }
     
+    
 
     @media all and (min-width: 480px) {
       .Login {
@@ -182,11 +196,11 @@ img.bg {
     background-color: #ffffff;
     text-align: center;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
-    border: 2px solid black;
+    border: 2px rounded black;
     margin: 10% auto;
     width:25% ;
     height:275px;
-    opacity: 0.6;
+    opacity: 0.7;
     border-radius: 25px
     
     
@@ -204,16 +218,16 @@ img.bg {
     }
     .splash {
       padding: 15px 15px 25px 15px;
-      background-color: #ffffff;
+      background-color:#ffffff;
       text-align: center;
       border: 2px solid black;
       margin: 3% auto;
       width:500 px;
-      opacity: 0.6;
+      opacity: 1;
       border-radius: 25px
     }
     .splash .splash__title {
-      font-weight: 200;
+      font-weight: 400;
       font-size: 32px;
       color: black;
       font-style: serif;
@@ -222,7 +236,7 @@ img.bg {
       color: black;
       font-size: 16px;
       line-height: 24px;
-      font-weight: 300;
+      font-weight: 400;
       opacity: 10;
       padding: 0 160px;
       margin: 0;
@@ -236,13 +250,17 @@ img.bg {
     }
  
     .Register {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 15px 15px 25px 15px;
       background-color: #ffffff;
       text-align: center;
-      border: 2px solid black;
+      border: 2px rounded black;
       margin: 10% auto;
       width: 50%;
-      opacity: 0.6;
+      opacity: 0.9;
       border-radius: 25px
     }
 
@@ -283,12 +301,15 @@ img.bg {
   position: relative;
   border-radius: .25rem;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
-  background-color: rgb(141, 141, 175);
+  background-color: rgb(161, 153, 201);
   transform-style: preserve-3d;
   transition: 150ms;
   cursor: pointer;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0))
   translateY(var(--translate-y, 0));
+}
+#flashcard {
+  background-color: rgb(161, 153, 201);
 }
 
 .card:hover {
@@ -341,6 +362,7 @@ transform: rotateY(180deg);
   margin-top: 0;
 }
 
+
 .forum {
   padding: 25px 25px 25px 25px;
       background-color: #ffffff;
@@ -367,5 +389,58 @@ input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
   border-radius: 15px;
-  
+
 }
+
+#surfer {
+  background-color: teal;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#California {
+  background-color: tan;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#nets {
+  background-color: lightblue;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#coral {
+  background-color: lightblue;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#shark {
+  background-color: lightblue;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#hawaii {
+  background-color: tan;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+#redTide {
+  background-color: red;
+  color: black;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+#images {
+  border-radius: 20px;
+}
+

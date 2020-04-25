@@ -33,7 +33,7 @@ export default function flashCardList({ flashcards }) {
         {
             id: 3,
             question: 'Do government subsidies of Large-scale fishing contribute to over-fishing?',
-            answer: 'True. Subsidies can lead to overcapacity of fishing vessels and skewing of production costs so that fishing operations continue when they would otherwise not make economic sense',
+            answer: 'True! Subsidies can lead to overcapacity of fishing vessels and skewing of production costs so that fishing operations continue when they would otherwise not make economic sense',
             options: [
                 'True',
                 'False'
@@ -45,19 +45,19 @@ export default function flashCardList({ flashcards }) {
         {
             id: 4,
             question: 'Over eight million metric tons of plastic end up in the ocean every year.',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            answer: 'True! Every year, 8 million metric tons of plastics enter our ocean on top of the estimated 150 million metric tons that currently circulate our marine environments',
             options: [
                 'True',
                 'False',
                 'Im not sure.'
                 
             ],
-            src:'https://www.nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/'
+            src:'https://oceanconservancy.org/trash-free-seas/plastics-in-the-ocean/'
         },
         {
             id: 5,
             question: 'Can overfishing cause adverse changes to an oceans echo system?',
-            answer: 'True ,When Food sources are depleted in an area it can change and oceans echo system including the migratory patterns of predator Sea life and bring them closer inland and closer to human contact.',
+            answer: 'True! When Food sources are depleted in an area it can change and oceans echo system including the migratory patterns of predator Sea life and bring them closer inland and closer to human contact.',
             options: [
                 'True',
                 'False',
@@ -69,7 +69,7 @@ export default function flashCardList({ flashcards }) {
         {
             id: 6,
             question: 'Is the Red Tide harmful to humans?',
-            answer: 'Harmful algal blooms (Red Tide), or HABs, occur when colonies of algae—simple plants that live in the sea and freshwater—grow out of control while producing toxic or harmful effects on people, fish, shellfish, marine mammals, and birds. The human illnesses caused by HABs, though rare, can be debilitating or even fatal.',
+            answer: 'True! Harmful algal blooms(HAB), also known as Red tide can cause illnesses in humans. Though rare, they can be debilitating or even fatal.',
             options: [
                 'True',
                 'False'
@@ -81,7 +81,7 @@ export default function flashCardList({ flashcards }) {
         {
             id: 7,
             question: 'Can humans have worsening effects of the red tide?',
-            answer: 'Chemicals from farming, factories, sewage treatment plants and other sources can become dissolved in water on the land. This water, called runoff, eventually flows into the ocean and can cause algae to grow faster, leading to red tides.',
+            answer: 'True. Chemicals from farming, factories, sewage treatment plants become dissolved in water. This water, eventually flows into the ocean and can cause algae to grow faster, leading to red tides.',
             options: [
                 'True',
                 'False',
@@ -92,15 +92,43 @@ export default function flashCardList({ flashcards }) {
         },
         {
             id: 8,
-            question: 'What river is the most polluted?',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            question: 'How many Sharks are killed every year by fishing nets?',
+            answer: '500-700. Every year on average 500-700 sharks are caught and die in fishing nets',
             options: [
-                'The Hudson River',
-                'The Colorado River',
-                'The Ganges.'
+                '2000-3000',
+                '500-700',
+                'Over 5000'
+                
                 
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://www.nationalgeographic.com/culture/onward/2013/03/01/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection/',
+        },
+        {
+            id: 8,
+            question: 'In 2018 Florida saw its highest death rate of Manatees killed by boats',
+            answer: 'False! According to the Save the Manatee Club. In 2019, 130 manatees were killed by boats.',
+            options: [
+                'True',
+                'False',
+                
+                
+            ],
+            src:'https://www.mynews13.com/fl/orlando/news/2020/01/01/florida-manatees-2019-boat-deaths'
+        },
+        {
+            id: 8,
+            question: 'What is biggest threat to Manatees?',
+            answer: 'All of the Above! Manatees continue to face many threats, including collisions with boats, habitat loss and degradation, fishing gear entanglement, human harassment, red tide and other algal blooms, and climate change.',
+            options: [
+                'Humans',
+                'Loss of Habitat',
+                'Algae Blooms(Red Tide)',
+                'Fishing Nets',
+                'Climate Change',
+                'All of the above'
+                
+            ],
+            src:'https://defenders.org/wildlife/florida-manatee'
         }
         
       ]

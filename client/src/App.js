@@ -20,6 +20,7 @@ import Game from "./pages/game";
 
 
 
+
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,6 +31,7 @@ function App() {
     return email.length > 0 && password.length > 0;
   }
 
+  
 
   function loginUser(email, password) {
     console.log("Logged in");
@@ -49,7 +51,10 @@ function App() {
     <Router>
       <div className="App">
         <div className="App-header">
-          <h1> C.C.M.R.J Oceanic Conservation</h1>
+          <h1> C.C.M.R.J Oceanic Conservation Group
+          <br></br>
+                    We all can make a difference! 
+          </h1>
 
           <Nav />
 

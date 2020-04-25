@@ -59,12 +59,12 @@ onSubmit = (e) => {
 }
 
 displayBlogPost = (events) => {
-     if (!postMessage.length) return null; 
+     if (!post.length) return null; 
      
-    return postMessage.map((postMessage, index) => (
+    return post.map((post, index) => (
      <div key={index} >
-         <h3>{postMessage.title}</h3>
-         <p>{postMessage.body}</p>
+         <h3>{post.title}</h3>
+         <p>{post.body}</p>
      </div>
     ));
 };
@@ -76,7 +76,7 @@ getBlogPost = () => {
    API.forum()
     .then((response) => {
       const data = response.data;
-      this.setState({ postMessage: data });
+      this.setState({ post: data });
       console.log('data has been recieved');
     })
     .catch(() => {
@@ -107,7 +107,7 @@ render() {
             </form>
 
             <div className="blog">
-                {this.getBlogPost(this.state.postMessage)}
+                {this.getBlogPost(this.state.post)}
     </div>
         </div>
 

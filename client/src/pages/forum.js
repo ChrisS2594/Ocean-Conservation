@@ -1,9 +1,8 @@
-import React, {Component } from "react";
+import React, { useState, Component } from "react";
 //import { FormGroup } from "react-bootstrap";
 import API from "../utils/api";
 import "./../App.scss";
 //import axios from "axios";
-
 
 
 class Event extends Component {
@@ -49,10 +48,22 @@ onSubmit = (e) => {
             //check if login was successful, if user info comes back
             //if successful rout to to logedin state!!
             //pass hello user 
-            //else trow err
+            //else throw err
         });
+
+       
 }
 
+displayBlogPost = (events) => {
+     if (!post.length) return null; 
+     
+    return post.map((post, index) => (
+     <div key={index} >
+         <h3>{post.title}</h3>
+         <p>{post.body}</p>
+     </div>
+    ));
+};
 componentDidMount = () => {
     this.getBlogPost();
 };
@@ -61,16 +72,16 @@ getBlogPost = () => {
    API.forum()
     .then((response) => {
       const data = response.data;
-      this.setState({ posts: data });
+      this.setState({ post: data });
       console.log('data has been recieved');
     })
     .catch(() => {
       alert('error something happened');
     });
   
+    
   
   }
-  
 render() {
     return (
 
@@ -91,7 +102,9 @@ render() {
 
             </form>
 
-
+            <div className="blog">
+                {this.getBlogPost(this.state.post)}
+    </div>
         </div>
 
     );

@@ -51,7 +51,10 @@ function App() {
     <Router>
       <div className="App">
         <div className="App-header">
-          <h1> C.C.M.R.J Oceanic Conservation</h1>
+          <h1> C.C.M.R.J Oceanic Conservation Group
+          <br></br>
+                    We all can make a difference! 
+          </h1>
 
           <Nav />
 

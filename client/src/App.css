@@ -225,7 +225,7 @@ body {
 
 
 /*styles for flashcards need to figure out how to impliment into App.scss */
-.card-grid {
+/* .card-grid {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -283,4 +283,4 @@ transform: rotateY(180deg);
 
 .flashcard-option:first-child {
   margin-top: 0;
-}
+} */

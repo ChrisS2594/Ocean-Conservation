@@ -106,8 +106,8 @@ render() {
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                     <input className="form-control" type="text" placeholder="Title" name="event" require onChange={this.onChangeTitle} />
-                    <div className="form-control" >
-                        <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
+                    <div className="form-group" >
+                        <input className="form-control" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
                     </div>
                 </div>
                 <div className="message">

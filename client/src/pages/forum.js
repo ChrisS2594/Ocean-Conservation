@@ -42,13 +42,13 @@ class Event extends Component {
 onSubmit(e) {
     e.preventDefault();
     const post ={
-        title: this.title,
-        description: this.description,
-        date:this.today
+        title: this.state.title,
+        description: this.state.description,
+        date:this.state.today
 
     }
     this.setState(post);
-        console.log =(post)
+        console.log(post)
     API.forumadd(this.state)
         .then(res => {
             console.log(res.data);
@@ -114,7 +114,7 @@ render() {
             </form>
 
             <div className="blog">
-                {this.getBlogPost(this.state.post)}
+                <p> {this.state.post}</p>
     </div>
         </div>
 

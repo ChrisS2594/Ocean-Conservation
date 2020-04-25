@@ -17,6 +17,7 @@ export default {
         
     },
     forumadd: function(add){
+        console.log('forum add api call: ${JSON.stringify(add)}');
         return axios.post('/events/add', add);
     }
 }

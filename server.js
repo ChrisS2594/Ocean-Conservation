@@ -32,10 +32,12 @@ mongoose.connection.on("conected", ()=>{
 const usersRouter = require("./routes/users");
 const eventsRouter = require("./routes/events");
 const userSession = require("./routes/login");
+const eventAdd = require("./routes/events");
 
 app.use("/events", eventsRouter);
 app.use("/users", usersRouter);
 app.use("/login", userSession);
+app.use("/add", eventAdd);
 app.listen(port, ()=>{
     console.log(`server runing on port: ${port}`);
 });

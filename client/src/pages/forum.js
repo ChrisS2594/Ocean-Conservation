@@ -2,19 +2,22 @@ import React, { useState, Component } from "react";
 //import { FormGroup } from "react-bootstrap";
 import API from "../utils/api";
 import "./../App.scss";
-import axios from "axios";
+//import axios from "axios";
 
 
 class Event extends Component {
     constructor(props) {
         super(props);
-
+        let today = new Date();
         this.state = {
             title: "",
-            event: ""
+            description: "",
+            date:today
+
         };
         this.onChangeTitle = this.onChangeTitle.bind(this);
-        this.onChangeEvent = this.onChangeEvent.bind(this);
+        this.onChangeDescription = this.onChangeDescription.bind(this);
+        // this.onChangeDate = this.onChangeDate.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
     }
@@ -23,16 +26,21 @@ class Event extends Component {
             Title: e.target.value
         });
     }
-    onChangeEvent(e) {
+    onChangeDescription(e) {
         this.setState({
-            Esvent: e.target.value
+            description: e.target.value
         });
     }
+    // onChangeDate(e) {
+    //     this.setState({
+    //         date:e.target.date
+    //     });
+    // }
 
 onSubmit = (e) => {
     e.preventDefault()
     console.log(this.state);
-    API.forum(this.state)
+    API.forumadd(this.state)
         .then(res => {
             console.log(res.data);
             //check if login was successful, if user info comes back
@@ -49,9 +57,9 @@ render() {
 
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <input className="titleinput" type="text" placeholder="Title" name="title" required onChange={this.onChange} />
-                    <div className="input" >
-                        <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChange} />
+                    <input className="form-control" type="text" placeholder="Title" name="event" require onChange={this.onChangeTitle} />
+                    <div className="form-control" >
+                        <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
                     </div>
                 </div>
                 <div className="message">

@@ -6,14 +6,9 @@ import "./../App.scss";
 import API from "../utils/api";
 import {
    BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+  Link,} from "react-router-dom";
 //import OvrFsh from "./overfishing"
-import axios from "axios";
+//import axios from "axios";
 
 
 

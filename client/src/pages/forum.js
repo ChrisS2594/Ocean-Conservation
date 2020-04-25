@@ -12,7 +12,8 @@ class Event extends Component {
         this.state = {
             title: "",
             description: "",
-            date:today
+            date:today,
+            posts: []
 
         };
         this.onChangeTitle = this.onChangeTitle.bind(this);
@@ -62,15 +63,15 @@ onSubmit(e) {
        
 }
 
-displayBlogPost = (props) => {
-     //if (!props.length) return null; 
-     
-    return (
-    <div className='Post' id={props[0].id}>
-         <h3>{props[0].title}</h3>
-         <p>{props[0].body}</p>
-     </div>
-    );
+displayBlogPost = (posts) => {
+     if (!posts.length) return null; 
+
+     //console.log(posts);
+     posts.map(post => {
+         console.log(post);
+        
+     })
+    
 };
 componentDidMount = () => {
     this.getBlogPost();
@@ -81,10 +82,11 @@ getBlogPost = () => {
    API.forum('/Event')
     .then((response) => {
         this.displayBlogPost(response.data);
-        console.log(response);
+        //console.log(response);
       const data = response.data;
+      //console.log(data);
       //e.preventDefault()
-      this.setState({ event: data });
+      this.setState({ posts: data });
       
     //   console.log('Event');
       
@@ -108,17 +110,35 @@ render() {
                     <input className="form-control" type="text" placeholder="Title" name="event" require onChange={this.onChangeTitle} />
                     <div className="form-control" >
                         <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
+                        <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
+                    <div className="forum">
+               {this.state.posts.map ( post => {
+                   return (
+                    <div className='Post' id={post.id}>
+                         <h3>{post.title}</h3>
+                         <p>{post.body}</p>
+                     </div>
+                    );
+               })}
+    </div>
                 </div>
+              
+                
                 <div className="message">
-                    forum goes here
+                   
                             </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-
             </form>
 
             <div className="blog">
-                <p> {this.state.post}</p>
+               {this.state.posts.map ( post => {
+                   return (
+                    <div className='Post' id={post.id}>
+                         <h3>{post.title}</h3>
+                         <p>{post.body}</p>
+                     </div>
+                    );
+               })}
     </div>
         </div>
 

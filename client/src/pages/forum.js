@@ -73,7 +73,7 @@ getBlogPost = () => {
     .then((response) => {
       const data = response.data;
       this.setState({ post: data });
-      console.log('data has been recieved');
+      console.log(this.getBlogPost, "im here");
     })
     .catch(() => {
       alert('error something happened');

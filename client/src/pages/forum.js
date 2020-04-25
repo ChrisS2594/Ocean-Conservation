@@ -51,6 +51,7 @@ onSubmit(e) {
         console.log(post)
     API.forumadd(this.state)
         .then(res => {
+            this.getBlogPost();
             console.log(res.data);
             //check if login was successful, if user info comes back
             //if successful rout to to logedin state!!
@@ -62,27 +63,30 @@ onSubmit(e) {
 }
 
 displayBlogPost = (props) => {
-     if (!props.length) return null; 
+     //if (!props.length) return null; 
      
     return (
-    <div className='Post' id={props.id}>
-         <h3>{props.title}</h3>
-         <p>{props.body}</p>
+    <div className='Post' id={props[0].id}>
+         <h3>{props[0].title}</h3>
+         <p>{props[0].body}</p>
      </div>
     );
 };
-componentDidMount = (e) => {
+componentDidMount = () => {
     this.getBlogPost();
+    
 };
 
-getBlogPost = (e) => {
+getBlogPost = () => {
    API.forum('/Event')
     .then((response) => {
+        this.displayBlogPost(response.data);
+        console.log(response);
       const data = response.data;
       //e.preventDefault()
       this.setState({ event: data });
       
-      console.log('Event');
+    //   console.log('Event');
       
     })
     .catch(() => {

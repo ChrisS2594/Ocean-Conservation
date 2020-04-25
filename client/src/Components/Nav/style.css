@@ -2,11 +2,11 @@
     width: 60em; /* 1000 */
     position: sticky;
     top: 50%;
-    left: 10%;
+    left: 15%;
     border-radius: .25rem;
     margin-left: -15em; /* 30 480 */
     margin-top: 2em;
-    z-index:2;
+    z-index:1;
    
   }
   #nav > a {

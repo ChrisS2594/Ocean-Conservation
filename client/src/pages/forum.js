@@ -1,5 +1,5 @@
 import React, { useState, Component } from "react";
-import { FormGroup } from "react-bootstrap";
+//import { FormGroup } from "react-bootstrap";
 import API from "../utils/api";
 import "./../App.scss";
 import axios from "axios";
@@ -10,8 +10,8 @@ class Event extends Component {
         super(props);
 
         this.state = {
-            title: (""),
-            event: ("")
+            title: "",
+            event: ""
         };
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeEvent = this.onChangeEvent.bind(this);
@@ -20,21 +20,15 @@ class Event extends Component {
     }
     onChangeTitle(e) {
         this.setState({
-            title: e.target.value
+            Title: e.target.value
         });
     }
     onChangeEvent(e) {
         this.setState({
-            event: e.target.value
+            Esvent: e.target.value
         });
     }
 
-
-onChange = (e) => {
-    this.setState({
-        [e.target.event]: e.target.value
-    });
-}
 onSubmit = (e) => {
     e.preventDefault()
     console.log(this.state);
@@ -50,13 +44,13 @@ onSubmit = (e) => {
 render() {
     return (
 
-        <div className="Register">
-            <p className="register__title">Community Message Board</p>
+        <div className="forum">
+            <p className="forum__title">Community Message Board</p>
 
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <input className="form-control" type="text" placeholder="Title" name="event" required onChange={this.onChange} />
-                    <div className="form-control" >
+                    <input className="titleinput" type="text" placeholder="Title" name="title" required onChange={this.onChange} />
+                    <div className="input" >
                         <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChange} />
                     </div>
                 </div>

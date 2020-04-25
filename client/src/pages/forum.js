@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, {Component } from "react";
 //import { FormGroup } from "react-bootstrap";
 import API from "../utils/api";
 import "./../App.scss";

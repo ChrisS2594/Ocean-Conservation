@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 //import '@brainhubeu/react-carousel/lib/style.css';
 //import Axios from "axios";

@@ -1,5 +1,5 @@
-import React, { useState, Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import React, {Component } from "react";
+//import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 //import Carousel, { Dots } from '@brainhubeu/react-carousel';
 //import '@brainhubeu/react-carousel/lib/style.css';
 import "./../App.scss";

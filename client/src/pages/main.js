@@ -5,6 +5,7 @@ import React from "react";
 //import Axios from "axios";
 import "./../App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
 import Carousel from "react-bootstrap/Carousel";
 import Beach from "../images/oceantrash3.jpg";
 import Trash from "../images/beachcleanup (1).jpg";
@@ -21,6 +22,7 @@ import {
   //BrowserHistory
 } from "react-router-dom";
 
+
 // const [data, setData ] = useState({})
 // function getData() {
 //this represents the route that cesar is making
@@ -35,7 +37,8 @@ import {
 function Main() {
   return (
     <div>
-      <iframe
+      <div>
+       <iframe
         width="800"
         height="400"
         src="https://www.youtube.com/embed/xLx4fVsYdTI"
@@ -43,6 +46,8 @@ function Main() {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+      
+      </div>
       <br />
       <div className="splash">
         <h3 className="splash__title">Overfishing:</h3>
@@ -78,7 +83,7 @@ function Main() {
       </div>
 
       <div>
-        <Carousel id="images">
+        <Carousel id="images" fade="true" touch="true">
           <Carousel.Item>
             <img className="d-block w-100" src={Beach} alt="First slide" />
             <Carousel.Caption id="surfer">

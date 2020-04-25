@@ -34,23 +34,33 @@ body {
 * {
     box-sizing: border-box;
   }
-  html,
-  body {
-    height: 100%;
-    min-height: 600px;
-  }
-  body {
-    
-    background: url(ocean.jpg) ;
-    background-repeat: no-repeat;
+
+
+  html { 
+    background: url(ocean.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
-    font-family: 'roboto', 'helvetica neue', arial, sans-serif;
-    
-    
   }
   
-  
+  // html,
+  // body {
+  //   height: 100%;
+  //   min-height: 600px;
+  // }
+  // body {
+    
+  //   background: url(ocean.jpg) ;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   height: 100%;
+  //   font-family: 'roboto', 'helvetica neue', arial, sans-serif;
+    
+    
+  // }
+
+    
   /* --- Intro text to the page --- */
   .intro {
     padding: 15px 15px 25px 15px;
@@ -164,6 +174,7 @@ img.bg {
       font-family:'Amiri', serif;
       
     }
+    
     
 
     @media all and (min-width: 480px) {

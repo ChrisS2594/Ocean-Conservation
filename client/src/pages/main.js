@@ -4,6 +4,17 @@ import Redtide from "./redtide";
 //import '@brainhubeu/react-carousel/lib/style.css';
 //import Axios from "axios";
 import "./../App.scss";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Carousel from "react-bootstrap/Carousel";
+import Beach from "../images/oceantrash3.jpg";
+import Trash from "../images/beachcleanup (1).jpg";
+import Nets from "../images/fishingnets3.jpg";
+import Coral from "../images/destroyed coral (1).jpg";
+import Shark from "../images/whaleshark in net (1).jpg";
+import Hawaii from "../images/beachcleanuphawaii1.jpg";
+import RedBeach from "../images/redbloom2.jpg"
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,7 +56,90 @@ function Main() {
               
           </div>
 <div>
-  
+
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Beach}
+      alt="First slide"
+    />
+    <Carousel.Caption id="surfer">
+      <h3>Surfer</h3>
+      <p>A Surfer walks through piles of trash to get to the ocean</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Trash}
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Beach cleanup in California</h3>
+      <p>Members of the public cleaning up a beach near Los Angeles, CA. "source: LA Times"</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Nets}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Fishing Nets</h3>
+      <p>Discarded Nets Recovered from the ocean and beach.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Coral}
+      alt="Fourth slide"
+    />
+    <Carousel.Caption>
+      <h3>Destroyed Coral Reef</h3>
+      <p>Destroyed Coral Reef Bed in the pacific ocean caused by overfishing.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Shark}
+      alt="Fifth slide"
+    />
+    <Carousel.Caption>
+      <h3>Whale Shark Caught in Net</h3>
+      <p>Every year 400-700 sharks are caught in nets</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={Hawaii}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>Clean Up In Hawaii</h3>
+      <p>Members of the public doing a cleanup on the Big Island.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={RedBeach}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>Red Ocean</h3>
+      <p>Red Algae along the beach and shore </p>
+    </Carousel.Caption>
+  </Carousel.Item>     
+
+</Carousel>
+ 
 </div>
           
           <div className="splash">

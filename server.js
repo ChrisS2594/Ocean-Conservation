@@ -19,7 +19,10 @@ app.use(session({
     }
 }));
 app.use(express.json());
+
+//server configurations
 const config = require("./config");
+//connect to db
 mongoose.connect(config.dbUrl);
 mongoose.connection.on("conected", ()=>{
     console.log("connection success");

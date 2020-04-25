@@ -1,4 +1,4 @@
-import React, {Component } from "react";
+import React, { useState, Component } from "react";
 //import { FormGroup } from "react-bootstrap";
 import API from "../utils/api";
 import "./../App.scss";
@@ -21,6 +21,8 @@ class Event extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
     }
+   
+
     onChangeTitle(e) {
         this.setState({
             Title: e.target.value
@@ -39,16 +41,47 @@ class Event extends Component {
 
 onSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state);
+    //console.log(this.state);
     API.forumadd(this.state)
         .then(res => {
             console.log(res.data);
             //check if login was successful, if user info comes back
             //if successful rout to to logedin state!!
             //pass hello user 
-            //else trow err
+            //else throw err
         });
+
+       
 }
+
+displayBlogPost = (post) => {
+     if (!post.length) return null; 
+     
+    return post.map((post, index) => (
+     <div key={index} >
+         <h3>{post.title}</h3>
+         <p>{post.body}</p>
+     </div>
+    ));
+};
+componentDidMount = () => {
+    this.getBlogPost();
+};
+
+getBlogPost = () => {
+   API.forum()
+    .then((response) => {
+      const data = response.data;
+      this.setState({ post: data });
+      console.log(this.getBlogPost, "im here");
+    })
+    .catch(() => {
+      alert('error something happened');
+    });
+  
+    
+  
+  }
 render() {
     return (
 
@@ -69,7 +102,9 @@ render() {
 
             </form>
 
-
+            <div className="blog">
+                {this.getBlogPost(this.state.post)}
+    </div>
         </div>
 
     );

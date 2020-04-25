@@ -18,12 +18,15 @@ app.use(session({
         maxAge: 60 * (60000) // 1 hour
     }
 }));
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static("client/build"));
+}
 
 //server conations
 const config = require("./config");
 //connect to db
 mongoose.connect(config.dbUrl);
-mongoose.connection.on("conected", ()=>{
+mongoose.connection.on("connected", ()=>{
     console.log("connection success");
 });
 app.use(express.json());

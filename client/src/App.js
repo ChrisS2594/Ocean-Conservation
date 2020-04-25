@@ -30,6 +30,7 @@ function App() {
     return email.length > 0 && password.length > 0;
   }
 
+  
 
   function loginUser(email, password) {
     console.log("Logged in");

@@ -5,6 +5,7 @@ import "./../App.scss";
 //import axios from "axios";
 
 
+
 class Event extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +22,8 @@ class Event extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
     }
+   
+
     onChangeTitle(e) {
         this.setState({
             Title: e.target.value
@@ -39,7 +42,7 @@ class Event extends Component {
 
 onSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state);
+    //console.log(this.state);
     API.forumadd(this.state)
         .then(res => {
             console.log(res.data);
@@ -49,6 +52,25 @@ onSubmit = (e) => {
             //else trow err
         });
 }
+
+componentDidMount = () => {
+    this.getBlogPost();
+};
+
+getBlogPost = () => {
+   API.forum()
+    .then((response) => {
+      const data = response.data;
+      this.setState({ posts: data });
+      console.log('data has been recieved');
+    })
+    .catch(() => {
+      alert('error something happened');
+    });
+  
+  
+  }
+  
 render() {
     return (
 

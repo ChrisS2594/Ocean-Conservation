@@ -54,7 +54,7 @@ onSubmit = (e) => {
        
 }
 
-displayBlogPost = (events) => {
+displayBlogPost = (post) => {
      if (!post.length) return null; 
      
     return post.map((post, index) => (

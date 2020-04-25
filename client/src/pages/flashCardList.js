@@ -69,7 +69,7 @@ export default function flashCardList({ flashcards }) {
         {
             id: 6,
             question: 'Is the Red Tide harmful to humans?',
-            answer: 'Harmful algal blooms (Red Tide), or HABs, occur when colonies of algae—simple plants that live in the sea and freshwater—grow out of control while producing toxic or harmful effects on people, fish, shellfish, marine mammals, and birds. The human illnesses caused by HABs, though rare, can be debilitating or even fatal.',
+            answer: 'Harmful algal blooms(HAB), also known as The Red Tide. Can cause illnesses in humans, though rare It can be very debilitating or even fatal.',
             options: [
                 'True',
                 'False'
@@ -81,7 +81,7 @@ export default function flashCardList({ flashcards }) {
         {
             id: 7,
             question: 'Can humans have worsening effects of the red tide?',
-            answer: 'Chemicals from farming, factories, sewage treatment plants and other sources can become dissolved in water on the land. This water, called runoff, eventually flows into the ocean and can cause algae to grow faster, leading to red tides.',
+            answer: 'Chemicals from farming, factories, sewage treatment plants become dissolved in water. This water eventually flows into the ocean and can cause algae to grow faster, leading to red tides.',
             options: [
                 'True',
                 'False',
@@ -92,17 +92,40 @@ export default function flashCardList({ flashcards }) {
         },
         {
             id: 8,
-            question: 'What river is the most polluted?',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            question: 'Every Year 500-700 sharks are caught in fishing nets.',
+            answer: 'Over 500 sharks per year are killed by fishing nets and over 100 million are killed annually by nets overfishing and for their Fins.',
             options: [
-                'The Hudson River',
-                'The Colorado River',
-                'The Ganges.'
+                'True',
+                'False'
+                
                 
             ],
-            src:'https://www.businessinsider.com/photos-indias-ganges-river-pollution-2018-1'
+            src:'https://www.nationalgeographic.com/culture/onward/2013/03/01/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection/'
+        },
+        {
+            id: 8,
+            question: 'Every Year 500-700 sharks are caught in fishing nets.',
+            answer: 'Over 500 sharks per year are killed by fishing nets and over 100 million are killed annually by nets overfishing and for their Fins.',
+            options: [
+                'True',
+                'False'
+                
+                
+            ],
+            src:'https://www.nationalgeographic.com/culture/onward/2013/03/01/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection/'
+        },
+        {
+            id: 8,
+            question: 'Every Year 500-700 sharks are caught in fishing nets.',
+            answer: 'Over 500 sharks per year are killed by fishing nets and over 100 million are killed annually by nets overfishing and for their Fins.',
+            options: [
+                'True',
+                'False'
+                
+                
+            ],
+            src:'https://www.nationalgeographic.com/culture/onward/2013/03/01/100-million-sharks-killed-every-year-study-shows-on-eve-of-international-conference-on-shark-protection/'
         }
-        
       ]
     return (
         <div className="card-grid">

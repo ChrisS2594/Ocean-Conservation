@@ -35,7 +35,7 @@ function Nav() {
             </li>
 
           <li>
-            <Link to="/flashCard">Test Your Knowledge</Link>
+            <Link to="/flashCard">Quiz</Link>
           </li>
           <li><Link to="/login">Log In</Link></li>
         </ul>

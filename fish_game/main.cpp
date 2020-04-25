@@ -162,7 +162,7 @@ class cGameManager {
                 cout << "#";
             cout << endl;
 
-            cout << "Score:"  score << endl;
+            cout << "Score:" << score << endl;
         }
         void Input() {
             fish->Move();

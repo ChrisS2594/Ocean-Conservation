@@ -25,7 +25,7 @@ class Event extends Component {
 
     onChangeTitle(e) {
         this.setState({
-            Title: e.target.value
+            title: e.target.value
         });
     }
     onChangeDescription(e) {
@@ -39,9 +39,16 @@ class Event extends Component {
     //     });
     // }
 
-onSubmit = (e) => {
-    e.preventDefault()
-    //console.log(this.state);
+onSubmit(e) {
+    e.preventDefault();
+    const post ={
+        title: this.title,
+        description: this.description,
+        date:this.today
+
+    }
+    this.setState(post);
+        console.log =(post)
     API.forumadd(this.state)
         .then(res => {
             console.log(res.data);
@@ -54,29 +61,33 @@ onSubmit = (e) => {
        
 }
 
-displayBlogPost = (post) => {
-     if (!post.length) return null; 
+displayBlogPost = (props) => {
+     if (!props.length) return null; 
      
-    return post.map((post, index) => (
-     <div key={index} >
-         <h3>{post.title}</h3>
-         <p>{post.body}</p>
+    return (
+    <div className='Post' id={props.id}>
+         <h3>{props.title}</h3>
+         <p>{props.body}</p>
      </div>
-    ));
+    );
 };
-componentDidMount = () => {
+componentDidMount = (e) => {
     this.getBlogPost();
 };
 
-getBlogPost = () => {
-   API.forum()
+getBlogPost = (e) => {
+   API.forum('/Event')
     .then((response) => {
       const data = response.data;
-      this.setState({ post: data });
-      console.log(this.getBlogPost, "im here");
+      //e.preventDefault()
+      this.setState({ event: data });
+      
+      console.log('Event');
+      
     })
     .catch(() => {
       alert('error something happened');
+      //
     });
   
     

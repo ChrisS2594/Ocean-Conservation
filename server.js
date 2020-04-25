@@ -18,15 +18,16 @@ app.use(session({
         maxAge: 60 * (60000) // 1 hour
     }
 }));
-app.use(express.json());
 
-//server configurations
+//server conations
 const config = require("./config");
 //connect to db
 mongoose.connect(config.dbUrl);
 mongoose.connection.on("conected", ()=>{
     console.log("connection success");
 });
+app.use(express.json());
+app.use(express.urlencoded({ extended : false}));
 
 //const connection = mongoose.Collection;
 // connection.once("open",()=>{

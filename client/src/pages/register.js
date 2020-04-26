@@ -84,7 +84,9 @@ class CreateUser extends Component {
     render() {
         return (
             <div className="Register">
-                <p className="register__title">Register below</p>
+                <p className="register__title">Join Our Community Today
+                <br></br>
+                                                Register below</p>
                 {this.state.success === false &&
                     <p className="alert alert-danger" role="alert">
                         something Happened we dont like
@@ -108,8 +110,8 @@ class CreateUser extends Component {
                             <input type="text" className="form-control" placeholder="Last Name" name="LastName" required onChange={this.onChangeLastName} /></div>
                             <div form-group>
                                 <input className="form-control" type="text" placeholder="Email" name="Email" required onChange={this.onChangeEmail} /></div>
-                            <div className="form-control" >
-                                <input className="form" type="text" placeholder="Password" name="Password" require onChange={this.onChangePassword} />
+                            <div className="form-group" >
+                                <input className="form-control" type="text" placeholder="Password" name="Password" require onChange={this.onChangePassword} />
                             </div>
                             <button type="submit" className="btn btn-primary">Submit</button>
 

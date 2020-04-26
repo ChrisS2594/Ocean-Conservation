@@ -45,14 +45,14 @@ export default function flashCardList({ flashcards }) {
         {
             id: 4,
             question: 'Over eight million metric tons of plastic end up in the ocean every year.',
-            answer: 'The Ganges! The Ganges River has the unfortunate title of being the most polluted river in the world it also provides drinking water to over 400 million people.',
+            answer: 'True! Every year, 8 million metric tons of plastics enter our ocean on top of the estimated 150 million metric tons that currently circulate our marine environments',
             options: [
                 'True',
                 'False',
                 'Im not sure.'
                 
             ],
-            src:'https://www.nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/'
+            src:'https://oceanconservancy.org/trash-free-seas/plastics-in-the-ocean/'
         },
         {
             id: 5,

@@ -106,7 +106,7 @@ class CreateUser extends Component {
                             <label> First Name</label>
                             <input type="text" className="form-control" placeholder="First name" name="FirstName" required onChange={this.onChangeFirstName} /></div>
                         <div className="form-group">
-                            <label>Last Name</label>
+                           
                             <input type="text" className="form-control" placeholder="Last Name" name="LastName" required onChange={this.onChangeLastName} /></div>
                             <div form-group>
                                 <input className="form-control" type="text" placeholder="Email" name="Email" required onChange={this.onChangeEmail} /></div>

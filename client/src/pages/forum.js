@@ -106,11 +106,11 @@ class Event extends Component {
                 <p className="forum__title">Community Message Board</p>
 
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Enter your Title</label>
+                    <div className="form">
+                       <p className="forum__title">Enter your Title</p>
                         <input className="form-control" type="text" placeholder="Title" name="event" require onChange={this.onChangeTitle} />
-                        <div className="form-group" >
-                            <label>What do you want to say?</label>
+                        <div  className="form">
+                            <p className="forum__title">What do you want to say?</p>
                             <input className="form-control" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3899535fbe101f0aaaee",
-    "url": "/static/css/main.dc644034.chunk.css"
+    "revision": "0ab52d40745351bac128",
+    "url": "/static/css/main.a80bdd44.chunk.css"
   },
   {
-    "revision": "3899535fbe101f0aaaee",
-    "url": "/static/js/main.34e7e87e.chunk.js"
+    "revision": "0ab52d40745351bac128",
+    "url": "/static/js/main.9256e7e7.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/static/media/redbloom2.f7d3549e.jpg"
   },
   {
-    "revision": "33c61b8040969f15b5099d7162927ca0",
+    "revision": "e6ab1afdf0eed4239328890aaeb67c69",
     "url": "/index.html"
   }
 ];

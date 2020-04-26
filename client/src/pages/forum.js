@@ -126,21 +126,13 @@ render() {
                 </div>
               
                 
-                <div className="message">
-                   
-                            </div>
+                
             </form>
 
-            <div className="blog">
-               {this.state.posts.map ( post => {
-                   return (
-                    <div className='Post' id={post.id}>
-                         <h3>{post.title}</h3>
-                         <p>{post.body}</p>
-                     </div>
+           
                     );
                })}
-    </div>
+    
         </div>
 
     );

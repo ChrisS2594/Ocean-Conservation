@@ -65,7 +65,7 @@ function App() {
           <Route exact path="/redtide" component={Redtide} />
           <Route exact path="/register" component={CreateUser} />
           <Route exact path="/flashCard" component={flashCardList} />
-          <Route exact path="/Event" render={(props) => <Event {...props} setEvent={setEvent} setMessage={setMessage} />} component={Event}  />
+          <Route exact path="/messageboard" render={(props) => <Event {...props} setEvent={setEvent} setMessage={setMessage} />} component={Event}  />
           <Route exact path="/interactivegame" component={Game} />
           <Foot />
         </div>

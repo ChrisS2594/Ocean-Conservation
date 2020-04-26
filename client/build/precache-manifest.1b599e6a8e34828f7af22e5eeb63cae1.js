@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/static/media/redbloom2.f7d3549e.jpg"
   },
   {
-    "revision": "6fa327c810124010bf1f98b5df7e0bbf",
+    "revision": "686d9d947019dea63b560034792889a5",
     "url": "/index.html"
   }
 ];

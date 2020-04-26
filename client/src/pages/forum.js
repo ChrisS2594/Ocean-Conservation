@@ -107,15 +107,11 @@ render() {
 
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
+                    <label>Enter your Title</label>
                     <input className="form-control" type="text" placeholder="Title" name="event" require onChange={this.onChangeTitle} />
-<<<<<<< HEAD
-                    <div className="form-control" >
-                        <input className="form" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
-                        <button type="submit" className="btn btn-primary">Submit</button>
-=======
                     <div className="form-group" >
+                        <label>What do you want to say?</label>
                         <input className="form-control" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
->>>>>>> 2816aeb91125c5413345b7a6ca165eeeb4c1d78a
                     </div>
                     <div className="forum">
                {this.state.posts.map ( post => {

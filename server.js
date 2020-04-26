@@ -25,7 +25,7 @@ if (process.env.NODE_ENV == "production") {
 //server conations
 const config = require("./config");
 //connect to db
-mongoose.connect(config.dbUrl);
+mongoose.connect(config.dbUrl || "mongodb://User 1:hello123@ds147461.mlab.com:47461/heroku_h852br2w");
 mongoose.connection.on("connected", ()=>{
     console.log("connection success");
 });

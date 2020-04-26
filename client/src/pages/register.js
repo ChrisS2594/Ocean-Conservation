@@ -2,14 +2,14 @@ import React, {  Component, } from "react";
 //import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./../App.scss";
 import API from "../utils/api";
-// import {
+ import {
 //     BrowserRouter as Router,
 //     Switch,
 //     Route,
-//     Link,
+     Link,
 //     useRouteMatch,
 //     useParams
-// } from "react-router-dom";
+} from "react-router-dom";
 
 //import OvrFsh from "./overfishing"
 //import axios from "axios";
@@ -113,7 +113,7 @@ class CreateUser extends Component {
                             <div className="form-group" >
                                 <input className="form-control" type="text" placeholder="Password" name="Password" require onChange={this.onChangePassword} />
                             </div>
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <Link to={"/"}><button type="submit" className="btn btn-primary">Submit</button></Link>
 
                     </form>
                     

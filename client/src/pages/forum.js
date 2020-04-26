@@ -41,7 +41,7 @@ class Event extends Component {
     // }
 
     onSubmit(e) {
-        e.preventDefault();
+        //e.preventDefault();
         const post = {
             title: this.state.title,
             description: this.state.description,
@@ -126,7 +126,8 @@ class Event extends Component {
                                 return (
                                     <div className="post" id={post.id}>
                                         <h3 className="post__title">{post.title}</h3>
-                                        <p className="post__body">{post.event}</p>
+                                        
+                                        <p className="post__body">{post.description} {post.date}</p>
                                         
                                     </div>
                                     

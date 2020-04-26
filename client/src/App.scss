@@ -375,6 +375,17 @@ transform: rotateY(180deg);
       border-radius: 25px;
      
 }
+.forum .forum__body {
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  opacity: 10;
+  padding: 0 160px;
+  margin: 0;
+  text-align: justify;
+  text-indent: 20px;
+}
 
 .forum .forum__title {
   font-weight: 200;
@@ -447,6 +458,18 @@ input[type=text] {
 .Post {
   background-color: #ffffff;
       text-align: center;
-      border: 2px solid black;
-      margin: 10% auto;
+      border: 1px solid black;
+      border-radius: 15px;
+      margin: 5% auto;
+}
+.Post .post__body {
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  opacity: 10;
+  padding: 0 160px;
+  margin: 0;
+  text-align: justify;
+  text-indent: 20px;
 }

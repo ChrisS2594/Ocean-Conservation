@@ -92,7 +92,7 @@ getBlogPost = () => {
       
     })
     .catch(() => {
-      alert('error something happened');
+      console.log('error something happened');
       //
     });
   
@@ -113,6 +113,7 @@ render() {
                         <label>What do you want to say?</label>
                         <input className="form-control" type="text" placeholder="Event" name="event" require onChange={this.onChangeDescription} />
                     </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
                     <div className="forum">
                {this.state.posts.map ( post => {
                    return (

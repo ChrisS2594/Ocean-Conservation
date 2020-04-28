@@ -30,11 +30,12 @@ class Login extends Component {
     });
   }
   onSubmit=(e) => {
-    e.preventDefault()
+    // e.preventDefault()
     console.log(this.state);
     API.loginUser(this.state)
     .then(res => {
       console.log(res.data)
+     
       //check if login was successful, if user info comes back
       //if successful rout to to logedin state!!
       //pass hello user 
@@ -51,11 +52,11 @@ class Login extends Component {
                         <div className="form-group">
                                 <input className="form-control" type="text" placeholder="Email" name="email" required onChange={this.onChange} /></div>
                             <div className="form-group" >
-                                <input className="form-control" type="text" placeholder="Password" name="password" require onChange={this.onChange} />
+                                <input className="form-control" type="password" placeholder="Password" name="password" require onChange={this.onChange} />
                             </div>
                             <button type="submit" className="btn btn-primary loginbtn">Submit</button>
                             <br/>
-                      <Link to="/register">Register Here</Link>
+                      
                     </form>
                     
                 
